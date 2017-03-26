@@ -1,4 +1,3 @@
-
 <!DOCTYPE html><!--
    Name: GODLIKE - Gaming Template
    Version: 1.2.0
@@ -159,8 +158,9 @@
     <nav class="nk-navbar nk-navbar-top nk-navbar-sticky nk-navbar-transparent nk-navbar-autohide">
         <div class="container">
             <div class="nk-nav-table">
-                <a href="{{ path('fos_user_security_login') }}" class="nk-nav-logo"><img src="{{ asset('bundles/assets/images/logo.png') }}"
-                                                                alt="" width="90"></a>
+                <a href="{{ path('fos_user_security_login') }}" class="nk-nav-logo"><img
+                            src="{{ asset('bundles/assets/images/logo.png') }}"
+                            alt="" width="90"></a>
                 <ul class="nk-nav nk-nav-right hidden-md-down" data-nav-mobile="#nk-nav-mobile">
                     <li class="active"><a href="index-2.html">Home</a></li>
                     <li class="nk-drop-item">
@@ -298,29 +298,48 @@
                                                             data-nav-toggle="#nk-nav-mobile"><span
                                     class="nk-icon-burger"><span class="nk-t-1"></span> <span
                                         class="nk-t-2"></span> <span class="nk-t-3"></span></span></a></li>
-                    <li class="single-icon"><a href="#" class="nk-search-toggle no-link-effect"><span
-                                    class="nk-icon-search"></span></a></li>
-                    <li>
-                        <a href="#" data-toggle="modal" data-target="#modalLogin" class="link-effect-4 ready"><span
-                                    class="link-effect-inner"><span class="link-effect-l"><span>
 
-                      {% block iconUser%}  <span class="fa fa-user"></span>
+                    {% if (app.user==null) %}
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#modalLogin" class="link-effect-4 ready"><span
+                                        class="link-effect-inner"><span class="link-effect-l"><span>
+
+                      {% block iconUser %} <span class="fa fa-user"></span>
                     </span></span><span class="link-effect-r"><span>
 
 
                          <span class="fa fa-user"></span>
                     </span></span>
-                                {% endblock  %}
+                                    {% endblock %}
 
-                                <span class="link-effect-shade"><span>
+                                    <span class="link-effect-shade"><span>
                         <span class="fa fa-user"></span>
                     </span></span></span></a>
-                    </li>
+                        </li>
+                    {% endif %}
 
-                    <li ><a > {% if (app.user!=null)  %}
+                    {% if (app.user!=null) %}
+                        <li>
+                            <a href="{{ path('fos_user_security_logout') }}" class="link-effect-4 ready"><span
+                                        class="link-effect-inner"><span class="link-effect-l"><span>
+
+                      <span class="ion-log-out"></span>
+                    </span></span><span class="link-effect-r"><span>
+
+
+                         <span class="ion-log-out"></span>
+                    </span></span>
+
+                                <span class="link-effect-shade"><span>
+                        <span class="ion-log-out"></span>
+                    </span></span></span></a>
+                        </li>
+                    <li><a>
                                 {{ app.user.username }}
-                            {% endif %}
+
                         </a></li>
+
+                    {% endif %}
                     <li class="single-icon"><a href="#" class="no-link-effect" data-nav-toggle="#nk-side"><span
                                     class="nk-icon-burger"><span class="nk-t-1"></span> <span
                                         class="nk-t-2"></span> <span class="nk-t-3"></span></span></a></li>
@@ -388,7 +407,8 @@
                     </ul>
                 </div>
                 <div class="nk-nav-row">
-                    <div class="nk-nav-footer">&copy; HangarGame est édité par le groupe Hall 9000, un groupe d'etudiants qui etudient a l'ecole des ingenieurs ESPRIT
+                    <div class="nk-nav-footer">&copy; HangarGame est édité par le groupe Hall 9000, un groupe
+                        d'etudiants qui etudient a l'ecole des ingenieurs ESPRIT
                     </div>
                 </div>
             </div>
@@ -466,7 +486,8 @@
                             data-thumb="{{ asset('bundles/assets/images/gallery-3-thumb.jpg') }}" data-rotate="0"
                             data-saveperformance="off">
                             <!-- MAIN IMAGE --><img src="{{ asset('bundles/assets/images/gallery-3.jpg') }}"> alt=""
-                            data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg"
+                            data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"
+                            class="rev-slidebg"
                             data-no-retina>
                         </li>
                         <!-- SLIDE  -->
@@ -506,10 +527,12 @@
             <div class="row vertical-gap lg-gap">
                 <div class="col-md-4">
                     <div class="nk-ibox">
-                        <div class="nk-ibox-icon nk-ibox-icon-circle"><span class="ion-ios-game-controller-b"></span></div>
+                        <div class="nk-ibox-icon nk-ibox-icon-circle"><span class="ion-ios-game-controller-b"></span>
+                        </div>
                         <div class="nk-ibox-cont">
                             <h2 class="nk-ibox-title">Incredible Atmosphere</h2>
-                            Second Made make spirit green divide lesser creeping void and night replenish cattle don't was
+                            Second Made make spirit green divide lesser creeping void and night replenish cattle don't
+                            was
                             female first their day open.
                         </div>
                     </div>
@@ -519,7 +542,8 @@
                         <div class="nk-ibox-icon nk-ibox-icon-circle"><span class="ion-fireball"></span></div>
                         <div class="nk-ibox-cont">
                             <h2 class="nk-ibox-title">Catchy Battles</h2>
-                            Image their gathered. Every. Called together signs winged, unto midst sea life air them. Us sea
+                            Image their gathered. Every. Called together signs winged, unto midst sea life air them. Us
+                            sea
                             them shall you saw.
                         </div>
                     </div>
@@ -529,7 +553,8 @@
                         <div class="nk-ibox-icon nk-ibox-icon-circle"><span class="ion-ribbon-a"></span></div>
                         <div class="nk-ibox-cont">
                             <h2 class="nk-ibox-title">28 Awards</h2>
-                            Moveth fruitful it appear wherein man don't firmament set blessed. Beast seas god itself. Made
+                            Moveth fruitful it appear wherein man don't firmament set blessed. Beast seas god itself.
+                            Made
                             night image male. Own night.
                         </div>
                     </div>
@@ -545,7 +570,9 @@
                 <div class="nk-gap-2"></div>
                 <h2 class="nk-title h1">A propos de nous ..</h2>
                 <div class="nk-gap-3"></div>
-                <p class="lead">HangarGame : le site sur l'actualité du jeu vidéo sur consoles et PC. Retrouvez l'actualité des jeux vidéo grâce à nos news, tests, astuces, solutions et vidéos. Rejoignez notre communauté et participez aux forums et tournois</p>
+                <p class="lead">HangarGame : le site sur l'actualité du jeu vidéo sur consoles et PC. Retrouvez
+                    l'actualité des jeux vidéo grâce à nos news, tests, astuces, solutions et vidéos. Rejoignez notre
+                    communauté et participez aux forums et tournois</p>
                 <div class="nk-gap-2"></div>
                 <div class="row no-gutters">
                     <div class="col-md-4">
@@ -593,7 +620,7 @@
             <div class="row">
                 <div class="col-md-8 offset-md-2">
                     <div class="nk-plain-video" data-video="https://www.youtube.com/watch?v=Wb2qjfpOeMo"
-                         data-video-thumb="{{ asset('bundles/assets/images/video-6-thumb.jpg')}}"></div>
+                         data-video-thumb="{{ asset('bundles/assets/images/video-6-thumb.jpg') }}"></div>
                 </div>
             </div>
             <div class="nk-gap-2"></div>
@@ -603,11 +630,12 @@
         <div class="nk-box bg-dark-1 text-center">
             <div class="nk-gap-6"></div>
             <div class="nk-gap-2"></div>
-            <div class="bg-image op-3" style="background-image: url({{ asset('bundles/assets/images/image-3.jpg') }}"></div>
+            <div class="bg-image op-3"
+                 style="background-image: url({{ asset('bundles/assets/images/image-3.jpg') }}"></div>
             <div class="container">
                 <h2 class="display-4">HangarGame</h2>
                 <div class="nk-gap"></div>
-                <div>Ne ratez pas  votre tournoi dans ...</div>
+                <div>Ne ratez pas votre tournoi dans ...</div>
                 <div class="nk-gap-4"></div>
                 <div class="nk-countdown" data-end="2017-11-26 08:20" data-timezone="EST"></div>
             </div>
@@ -624,7 +652,8 @@
                         <blockquote class="nk-testimonial-2">
                             <div class="nk-testimonial-photo"
                                  style="background-image: url({{ asset('bundles/assets/images/avatar-1-sm.jpg') }}"></div>
-                            <div class="nk-testimonial-body"><em>"Beaucoup de développeurs indépendants qui sont devenus des «succès de nuit» travaillaient à cela pendant dix ans.."</em></div>
+                            <div class="nk-testimonial-body"><em>"Beaucoup de développeurs indépendants qui sont devenus
+                                    des «succès de nuit» travaillaient à cela pendant dix ans.."</em></div>
                             <div class="nk-testimonial-name h4">Dan adelman</div>
                             <div class="nk-testimonial-source"></div>
                         </blockquote>
@@ -635,8 +664,10 @@
                         <blockquote class="nk-testimonial-2">
                             <div class="nk-testimonial-photo"
                                  style="background-image: url({{ asset('bundles/assets/images/avatar-2-sm.jpg') }}"></div>
-                            <div class="nk-testimonial-body"><em>"Personne dans cette industrie ne sait ce qu'ils font - nous avons juste une hypothèse basée sur les jeux que nous pouvons jouer."</em></div>
-                            <div class="nk-testimonial-name h4">Cliff Bleszinski </div>
+                            <div class="nk-testimonial-body"><em>"Personne dans cette industrie ne sait ce qu'ils font -
+                                    nous avons juste une hypothèse basée sur les jeux que nous pouvons jouer."</em>
+                            </div>
+                            <div class="nk-testimonial-name h4">Cliff Bleszinski</div>
                             <div class="nk-testimonial-source">Video game designer</div>
                         </blockquote>
                     </div>
@@ -646,7 +677,8 @@
                         <blockquote class="nk-testimonial-2">
                             <div class="nk-testimonial-photo"
                                  style="background-image: url({{ asset('bundles/assets/images/avatar-3-sm.jpg') }}"></div>
-                            <div class="nk-testimonial-body"><em>"Le prix n'est qu'une question en l'absence de valeur."</em></div>
+                            <div class="nk-testimonial-body"><em>"Le prix n'est qu'une question en l'absence de
+                                    valeur."</em></div>
                             <div class="nk-testimonial-name h4">Daniel doan</div>
                             <div class="nk-testimonial-source"></div>
                         </blockquote>
@@ -657,7 +689,8 @@
                         <blockquote class="nk-testimonial-2">
                             <div class="nk-testimonial-photo"
                                  style="background-image: url({{ asset('bundles/assets/images/avatar-4-sm.jpg') }}"></div>
-                            <div class="nk-testimonial-body"><em>"Vous pouvez faire un jeu incroyable, mais vous ne pouvez pas réussir. Vos joueurs font le succès."</em></div>
+                            <div class="nk-testimonial-body"><em>"Vous pouvez faire un jeu incroyable, mais vous ne
+                                    pouvez pas réussir. Vos joueurs font le succès."</em></div>
                             <div class="nk-testimonial-name h4">Imre Jele</div>
                             <div class="nk-testimonial-source">GAmer , Game dev</div>
                         </blockquote>
@@ -668,7 +701,10 @@
                         <blockquote class="nk-testimonial-2">
                             <div class="nk-testimonial-photo"
                                  style="background-image: url({{ asset('bundles/assets/images/avatar-5-sm.jpg') }}"></div>
-                            <div class="nk-testimonial-body"><em>"Ils veulent raconter des histoires qui touchent le cœur des gens. Ce doit être l'expérience qui est touchante. Ce que je me suis efforcé de faire est de faire de la personne qui joue au jeu le directeur."</em></div>
+                            <div class="nk-testimonial-body"><em>"Ils veulent raconter des histoires qui touchent le
+                                    cœur des gens. Ce doit être l'expérience qui est touchante. Ce que je me suis
+                                    efforcé de faire est de faire de la personne qui joue au jeu le directeur."</em>
+                            </div>
                             <div class="nk-testimonial-name h4">Shigeru Miyamoto</div>
                             <div class="nk-testimonial-source"></div>
                         </blockquote>
@@ -682,7 +718,7 @@
 
     {% endblock %}
     {% block footer %}
-<!-- START: Footer --><!--
+    <!-- START: Footer --><!--
             Additional Classes:
                 .nk-footer-parallax
                 .nk-footer-parallax-opacity
@@ -713,7 +749,8 @@
                                                                                                   alt=""
                                                                                                   width="160"></a></div>
             <div class="nk-gap"></div>
-            <p>&copy;  HangarGame est édité par le groupe Hall 9000, un groupe d'etudiants qui etudient a l'ecole des ingenieurs ESPRIT
+            <p>&copy; HangarGame est édité par le groupe Hall 9000, un groupe d'etudiants qui etudient a l'ecole des
+                ingenieurs ESPRIT
             </p>
             <p> Copyright © 2016-2017 Hall 9000 Tous droits réservés.</p>
             <div class="nk-footer-links"><a href="#" class="link-effect">Terms of Service</a> <span>|</span> <a href="#"
@@ -767,7 +804,8 @@
    -->
 <div class="nk-side-buttons nk-side-buttons-visible">
     <ul>
-        <li><a href="https://nkdev.info/" target="_blank" class="nk-btn nk-btn-lg link-effect-4">Restez en contact</a></li>
+        <li><a href="https://nkdev.info/" target="_blank" class="nk-btn nk-btn-lg link-effect-4">Restez en contact</a>
+        </li>
         <li><span class="nk-btn nk-btn-lg nk-btn-icon nk-bg-audio-toggle"><span class="icon"><span
                             class="ion-android-volume-up nk-bg-audio-pause-icon"></span> <span
                             class="ion-android-volume-off nk-bg-audio-play-icon"></span></span></span></li>
@@ -796,7 +834,7 @@
 <div class="nk-modal modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-sm" role="document">
 
-        <div  class="modal-content" style="width: 500px; height: 446px;">
+        <div class="modal-content" style="width: 500px; height: 446px;">
             <div class="modal-body">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span class="ion-android-close"></span>
@@ -805,7 +843,6 @@
                 <h4 class="mb-0"><span class="text-main-1">Sign</span> In</h4>
 
                 <div class="nk-gap-1"></div>
-
 
 
                 {% block fos_user_content %}
