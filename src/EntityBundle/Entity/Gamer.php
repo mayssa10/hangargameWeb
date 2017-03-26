@@ -3,13 +3,14 @@
 namespace EntityBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use FOS\UserBundle\Model\User as BaseUser;
 
 /**
+ * Gamer
+ *
+ * @ORM\Table(name="gamer", uniqueConstraints={@ORM\UniqueConstraint(name="UNIQ_88241BA792FC23A8", columns={"username_canonical"}), @ORM\UniqueConstraint(name="UNIQ_88241BA7A0D96FBF", columns={"email_canonical"}), @ORM\UniqueConstraint(name="UNIQ_88241BA7C05FB297", columns={"confirmation_token"})})
  * @ORM\Entity
- * @ORM\Table(name="gamer")
  */
-class Gamer extends BaseUser
+class Gamer
 {
     /**
      * @var integer
@@ -18,7 +19,7 @@ class Gamer extends BaseUser
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    protected $id;
+    private $id;
 
     /**
      * @var string
@@ -76,158 +77,83 @@ class Gamer extends BaseUser
      */
     private $image;
 
-    public function __construct()
-    {
-        parent::__construct();
-        // your own logic
-    }
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="username", type="string", length=180, nullable=false)
+     */
+    private $username;
 
     /**
-     * @return int
+     * @var string
+     *
+     * @ORM\Column(name="username_canonical", type="string", length=180, nullable=false)
      */
-    public function getId()
-    {
-        return $this->id;
-    }
+    private $usernameCanonical;
 
     /**
-     * @param int $id
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=180, nullable=false)
      */
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
+    private $email;
 
     /**
-     * @return string
+     * @var string
+     *
+     * @ORM\Column(name="email_canonical", type="string", length=180, nullable=false)
      */
-    public function getNom()
-    {
-        return $this->nom;
-    }
+    private $emailCanonical;
 
     /**
-     * @param string $nom
+     * @var boolean
+     *
+     * @ORM\Column(name="enabled", type="boolean", nullable=false)
      */
-    public function setNom($nom)
-    {
-        $this->nom = $nom;
-    }
+    private $enabled;
 
     /**
-     * @return string
+     * @var string
+     *
+     * @ORM\Column(name="salt", type="string", length=255, nullable=true)
      */
-    public function getPrenom()
-    {
-        return $this->prenom;
-    }
+    private $salt;
 
     /**
-     * @param string $prenom
+     * @var string
+     *
+     * @ORM\Column(name="password", type="string", length=255, nullable=false)
      */
-    public function setPrenom($prenom)
-    {
-        $this->prenom = $prenom;
-    }
+    private $password;
 
     /**
-     * @return string
+     * @var \DateTime
+     *
+     * @ORM\Column(name="last_login", type="datetime", nullable=true)
      */
-    public function getAdresse()
-    {
-        return $this->adresse;
-    }
+    private $lastLogin;
 
     /**
-     * @param string $adresse
+     * @var string
+     *
+     * @ORM\Column(name="confirmation_token", type="string", length=180, nullable=true)
      */
-    public function setAdresse($adresse)
-    {
-        $this->adresse = $adresse;
-    }
+    private $confirmationToken;
 
     /**
-     * @return int
+     * @var \DateTime
+     *
+     * @ORM\Column(name="password_requested_at", type="datetime", nullable=true)
      */
-    public function getTel()
-    {
-        return $this->tel;
-    }
+    private $passwordRequestedAt;
 
     /**
-     * @param int $tel
+     * @var array
+     *
+     * @ORM\Column(name="roles", type="array", nullable=false)
      */
-    public function setTel($tel)
-    {
-        $this->tel = $tel;
-    }
+    private $roles;
 
-    /**
-     * @return \DateTime
-     */
-    public function getDateinscription()
-    {
-        return $this->dateinscription;
-    }
-
-    /**
-     * @param \DateTime $dateinscription
-     */
-    public function setDateinscription($dateinscription)
-    {
-        $this->dateinscription = $dateinscription;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCodevalidation()
-    {
-        return $this->codevalidation;
-    }
-
-    /**
-     * @param string $codevalidation
-     */
-    public function setCodevalidation($codevalidation)
-    {
-        $this->codevalidation = $codevalidation;
-    }
-
-    /**
-     * @return int
-     */
-    public function getValidation()
-    {
-        return $this->validation;
-    }
-
-    /**
-     * @param int $validation
-     */
-    public function setValidation($validation)
-    {
-        $this->validation = $validation;
-    }
-
-    /**
-     * @return string
-     */
-    public function getImage()
-    {
-        return $this->image;
-    }
-
-    /**
-     * @param string $image
-     */
-    public function setImage($image)
-    {
-        $this->image = $image;
-    }
-    public function getParent(){
-        return 'FOSUserBundle';
-    }
 
 }
 

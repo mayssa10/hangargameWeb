@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Produit
  *
- * @ORM\Table(name="produit")
+ * @ORM\Table(name="produit", indexes={@ORM\Index(name="store", columns={"store"})})
  * @ORM\Entity
  */
 class Produit
@@ -24,7 +24,7 @@ class Produit
     /**
      * @var string
      *
-     * @ORM\Column(name="nom", type="string", length=50, nullable=false)
+     * @ORM\Column(name="nom", type="string", length=20, nullable=false)
      */
     private $nom;
 
@@ -41,6 +41,16 @@ class Produit
      * @ORM\Column(name="prix", type="float", precision=10, scale=0, nullable=false)
      */
     private $prix;
+
+    /**
+     * @var \Store
+     *
+     * @ORM\ManyToOne(targetEntity="Store")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="store", referencedColumnName="id")
+     * })
+     */
+    private $store;
 
 
 }

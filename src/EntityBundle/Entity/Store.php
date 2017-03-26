@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Store
  *
- * @ORM\Table(name="store", indexes={@ORM\Index(name="user", columns={"user"}), @ORM\Index(name="user_2", columns={"user"}), @ORM\Index(name="user_3", columns={"user"}), @ORM\Index(name="produit", columns={"produit"})})
+ * @ORM\Table(name="store", indexes={@ORM\Index(name="user", columns={"user"}), @ORM\Index(name="user_2", columns={"user"})})
  * @ORM\Entity
  */
 class Store
@@ -24,7 +24,7 @@ class Store
     /**
      * @var string
      *
-     * @ORM\Column(name="nom", type="text", length=65535, nullable=false)
+     * @ORM\Column(name="nom", type="string", length=30, nullable=false)
      */
     private $nom;
 
@@ -36,18 +36,14 @@ class Store
     private $description;
 
     /**
-     * @var integer
+     * @var \Gamer
      *
-     * @ORM\Column(name="user", type="integer", nullable=false)
+     * @ORM\ManyToOne(targetEntity="Gamer")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="user", referencedColumnName="id")
+     * })
      */
     private $user;
-
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="produit", type="integer", nullable=false)
-     */
-    private $produit;
 
 
 }

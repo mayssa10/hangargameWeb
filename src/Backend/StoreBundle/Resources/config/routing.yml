@@ -1,0 +1,3 @@
+backend_store_homepage:
+    path:     /
+    defaults: { _controller: BackendStoreBundle:Default:index }
