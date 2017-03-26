@@ -59,23 +59,7 @@
     <link rel="stylesheet" href="{{ asset('bundles/assets/css/custom.css') }}">
     <!-- END: Styles --><!-- jQuery -->
     <script src="{{ asset('bundles/assets/bower_components/jquery/dist/jquery.min.js') }}"></script>
-    <!--
-    <script>(function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'bundles/assets/analytics.js', 'ga');
 
-        ga('create', 'UA-48958097-5', 'auto');
-        ga('send', 'pageview');
-    </script>
-    -->
 </head>
 <!--
    Additional Classes:
@@ -84,19 +68,7 @@
 <body>
 <!-- START: Page Preloader -->
 <div class="nk-preloader">
-    <!--
-       Preloader animation
-       data-close-... data used for closing preloader
-       data-open-...  data used for opening preloader
-       -->
-    <!--
-    <div class="nk-preloader-content">
-        <div>
-            <img class="nk-img" src="{{ asset('bundles/assets/images/logo.png') }}">
-            <div class="nk-preloader-animation"></div>
-        </div>
-    </div>
- -->
+
     <div class="nk-preloader-skip">Skip</div>
 </div>
 <!-- END: Page Preloader --><!-- START: Page Background -->
@@ -274,7 +246,7 @@
                     <li class="nk-drop-item">
                         <a href="store.html">Store</a>
                         <ul class="dropdown">
-                            <li class=""><a href="{{ path('frontend_ajouterannonce') }}">Créer votre store</a></li>
+                            <li class=""><a href="{{ path('store_new') }}">Créer votre store</a></li>
                             <li class=""><a href="store-product.html">Single Product</a></li>
                             <li class=""><a href="store-cart.html">Cart</a></li>
                             <li class=""><a href="store-checkout.html">Checkout</a></li>
@@ -440,6 +412,7 @@
     </div>
 </div>
 <!-- END: Navbar Mobile -->
+{% block titreImage %}
 <div class="nk-main">
     <!-- START: Header Title --><!--
             Additional Classes:
@@ -452,15 +425,17 @@
                 .nk-header-title-parallax-opacity
                 .nk-header-title-boxed
             -->
+
     <div class="nk-header-title nk-header-title-lg nk-header-title-parallax-opacity">
         <div class="bg-image">
             <div style="background-image: url({{ asset('bundles/assets/images/image-1.jpg') }}"></div>
         </div>
+
         <div class="nk-header-table">
             <div class="nk-header-table-cell">
                 <div class="container">
                     <div class="nk-header-text">
-                        <h1 class="nk-title display-3">HangarGame</h1>
+                      <h1 class="nk-title display-3">HangarGame</h1>
                         <div class="nk-gap-2"></div>
 
 
@@ -470,6 +445,7 @@
             </div>
         </div>
     </div>
+    {% endblock %}
     <!-- END: Header Title -->
 
     {% block Body %}

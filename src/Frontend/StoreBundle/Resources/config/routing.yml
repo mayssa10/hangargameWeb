@@ -1,6 +1,4 @@
 frontend_store_homepage:
     path:     /
     defaults: { _controller: FrontendStoreBundle:Default:index }
-frontend_ajouterannonce:
-    path:     /ajouterAnnonce
-    defaults: { _controller: FrontendStoreBundle:Default:AjouterStore }
+

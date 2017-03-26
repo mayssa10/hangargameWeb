@@ -1,3 +1,7 @@
+entity_store:
+    resource: "@FrontendStoreBundle/Resources/config/routing/store.yml"
+    prefix:   /store
+
 entity_homepage:
     path:     /
     defaults: { _controller: EntityBundle:Default:index }

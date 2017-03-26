@@ -1,0 +1,191 @@
+{% extends '@Entity/index2.html.twig' %}
+
+ {% block titreImage %}
+<div class="nk-main">
+    <!-- START: Header Title --><!--
+            Additional Classes:
+                .nk-header-title-sm
+                .nk-header-title-md
+                .nk-header-title-lg
+                .nk-header-title-xl
+                .nk-header-title-full
+                .nk-header-title-parallax
+                .nk-header-title-parallax-opacity
+                .nk-header-title-boxed
+            -->
+
+    <div class="nk-header-title nk-header-title-lg nk-header-title-parallax-opacity">
+        <div class="bg-image">
+            <div style="background-image: url({{ asset('bundles/assets/images/image-1.jpg') }}"></div>
+        </div>
+
+        <div class="nk-header-table">
+            <div class="nk-header-table-cell">
+                <div class="container">
+                    <div class="nk-header-text">
+                        <h1 class="nk-title display-3">Créer votre propre store</h1>
+                        <div class="nk-gap-2"></div>
+
+
+                        <div class="nk-gap-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+    {% block Body %}
+    <div class="nk-gap-2"></div>
+    <div class="nk-gap-2"></div>
+    <div class="text-center">
+        <button class="nk-btn nk-btn-x2" data-toggle="modal" data-target="#myModal">Créer votre propre store ! :)
+        </button>
+    </div>
+    {% if(nbElements)>0 %}
+    <div class="nk-main">
+        <div class="container">
+            <div class="nk-gap-4"></div>
+            <div class="nk-store nk-store-cart">
+                <div class="nk-box-3 bg-dark-1">
+                    <div class="table-responsive">
+                        <!-- START: Products in Cart -->
+                        <table class="table nk-store-cart-products">
+                            <tbody>
+                            <tr>
+                                <td class="nk-product-cart-thumb">
+                                </td>
+                                <td class="nk-product-cart-title">
+                                    <h2 class="nk-post-title h5"><a href="store-product.html"><font color="#FF8000">Nom
+                                                du store</font></a>
+                                    </h2>
+                                </td>
+                                <td class="nk-product-cart-title"><h2 class="nk-post-title h5"><font color="#FF8000">Description</font>
+                                    </h2>
+
+                                </td>
+                                <td class="nk-product-cart-title"><h2 class="nk-post-title h5"><font color="#FF8000">Gouvernerat</font>
+                                    </h2>
+
+                                </td>
+
+                                <td class="nk-product-cart-title"><h2 class="nk-post-title h5"><font color="#FF8000">Ville</font>
+                                    </h2>
+
+                                </td>
+
+
+                            </tr>
+                            {% for store in stores %}
+                                <tr>
+                                    <td class="nk-product-cart-thumb">
+                                        {% set lien = app.request.getBaseURL() ~ '/uploads/Images/Stores/' ~ store.image %}
+
+                                        <a href="store-product.html" class="nk-post-image"><img
+                                                    src="{{ lien }}"
+                                                    class="nk-img">
+                                        </a>
+                                    </td>
+                                    <td class="nk-product-cart-title">
+                                        <h2 class="nk-post-title h5"><a href="store-product.html">{{ store.nom }}</a>
+                                        </h2>
+                                    </td>
+                                    <td class="nk-product-cart-price">{{ store.description }}
+
+                                    </td>
+                                    <td class="nk-product-cart-price">{{ store.country }}
+
+                                    </td>
+
+                                    <td class="nk-product-cart-total">{{ store.city }}</td>
+
+                                    <td class="nk-product-cart-remove"><a
+                                                href="{{ path('store_delete',{'id':store.id}) }}"> <span
+                                                    class="ion-trash-b"></span></a>
+                                    </td>
+
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    {% endif %}
+<!-- END: Products in Cart -->
+
+    <div id="myModal" class="modal nk-modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title nk-title" id="myModalLabel">Créer votre propre store !!</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                class="ion-android-close"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="nk-gap"></div>
+
+                    {{ form_start(form,{'attr':{'class':'nk-form nk-form-style-1'}} ) }}
+
+                    <div class="nk-gap-2">
+                        {{ form_widget(form.nom,{'attr':{'class':'form-control required','placeholder':'Nom de votre store*' | trans }}) }}
+
+                    </div>
+
+
+                    <div class="nk-gap-2"></div>
+                    {{ form_widget(form.description,{'attr':{'class':'form-control required','placeholder':'Description*' | trans }}) }}
+
+                    <div class="nk-gap-2"></div>
+
+
+                    <div class="row vertical-gap">
+                        <div class="col-sm-6">
+                            {{ form_widget(form.country,{'attr':{'class':'form-control required','placeholder':'Gouvernerat*' | trans }}) }}
+
+                        </div>
+                        <div class="col-sm-6">
+                            {{ form_widget(form.city,{'attr':{'class':'form-control required','placeholder':'Ville*' | trans }}) }}
+
+
+                        </div>
+                        <div class="col-sm-6">
+                            {{ form_widget(form.image,{'attr':{'class':'form-control required','placeholder':'image*' | trans }}) }}
+
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="nk-btn" data-dismiss="modal">Close</button>
+                    <input type="submit" value="Enregistrer" tabindex="4"
+                           class="nk-btn nk-btn-color-main-1"/>
+
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+
+    </div> {{ form_end(form) }}
+<!-- END: Modal -->
+
+    <div class="nk-gap-2"></div>
+    <div class="nk-gap-2"></div>
+    <div class="nk-gap-2"></div>
+    <div class="nk-gap-2"></div>
+    <div class="nk-gap-2"></div>
+    <div class="nk-gap-2"></div>
+
+<!-- END: Billing Details -->
+
+
+    </div>
+    </div>
+{% endblock %}

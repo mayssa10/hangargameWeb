@@ -10,8 +10,5 @@ class DefaultController extends Controller
     {
         return $this->render('FrontendStoreBundle:Default:index.html.twig');
     }
-    public function AjouterStoreAction()
-    {
-        return $this->render('FrontendStoreBundle::ajouterStore.html.twig');
-    }
+
 }
