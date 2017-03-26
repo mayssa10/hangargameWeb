@@ -1,0 +1,71 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+
+{{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+
+<div class="row vertical-gap">
+    <div class="col-lg-6">
+        <div class="row vertical-gap">
+            <div class="col-sm-6">
+                <label for="fname">Prenom <span class="text-main-1">*</span>:</label>
+                {{ form_widget(form.prenom,{'attr':{'class':'form-control required','placeholder':'prenom' | trans }})  }}
+            </div>
+            <div class="col-sm-6">
+                <label for="lname">Nom <span class="text-main-1">*</span>:</label>
+                {{ form_widget(form.nom,{'attr':{'class':'form-control required','placeholder':'nom' | trans }})  }}
+            </div>
+            <div class="col-sm-6">
+                <label for="lname">Login <span class="text-main-1">*</span>:</label>
+                {{ form_widget(form.username,{'attr':{'class':'form-control required','placeholder':'form.username'|trans}})  }}
+            </div>
+            <div class="col-sm-6">
+                <label for="lname">Telephone<span class="text-main-1">*</span>:</label>
+                {{ form_widget(form.tel,{'attr':{'class':'form-control required','placeholder':'telephone'|trans}})  }}
+            </div>
+        </div>
+
+        <div class="nk-gap-1"></div>
+        <label for="email">Email Address<span class="text-main-1">*</span>:</label>
+        {{ form_widget(form.email,{'attr':{'class':'form-control required' , 'placeholder':'form.email'|trans  }})  }}
+        <div class="nk-gap-1"></div>
+        <label for="email">Adresse  <span class="text-main-1">*</span>:</label>
+        {{ form_widget(form.adresse,{'attr':{'class':'form-control required','placeholder':'adresse' | trans }})  }}
+
+
+        <div class="nk-gap-1"></div>
+        <div class="row vertical-gap">
+            <div class="col-sm-6">
+                <label for="fname">Mot de passe  <span class="text-main-1">*</span>:</label>
+                {{ form_widget(form.plainPassword.first,{'attr':{'class':'form-control required','placeholder':'form.new_password'|trans}})  }}
+            </div>
+            <div class="col-sm-6">
+                <label for="lname">Retapez votre mot de passe <span class="text-main-1">*</span>:</label>
+                {{ form_widget(form.plainPassword.second,{'attr':{'class':'form-control required','placeholder':'form.new_password_confirmation' | trans }})  }}
+
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+<div class="nk-gap-1"></div>
+<div class="row vertical-gap">
+    <div class="col-md-6">
+        <input type="submit" value="{{ 'registration.submit'|trans }}"id="register-submit" tabindex="4" class="nk-btn nk-btn-rounded nk-btn-color-white nk-btn-block" />
+    </div>
+
+</div>
+{{ form_end(form) }}
+
+
+
+
+
+
+
+
+
+
+
+
+

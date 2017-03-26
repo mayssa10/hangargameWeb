@@ -1,0 +1,53 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% if error %}
+    <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+{% endif %}
+
+<form action="{{ path("fos_user_security_check") }}" method="post"  class="nk-form text-white" >
+    {% if csrf_token %}
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+    {% endif %}
+    <div class="row vertical-gap">
+        <div class="col-md-6">
+            Use email and password:
+
+            <div class="nk-gap"></div>
+    <label for="username">{{ 'security.login.username'|trans }}</label>
+    <input type="text" id="username" name="_username" value="{{ last_username }}" required="required"  class=" form-control" placeholder="Email" />
+            <div class="nk-gap"></div>
+    <label for="password">{{ 'security.login.password'|trans }}</label>
+    <input type="password" id="password" name="_password" required="required" class="required form-control" placeholder="Password" />
+
+    <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+    <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+        </div>
+        <div class="col-md-6">
+            Or social account:
+
+            <div class="nk-gap"></div>
+
+            <ul class="nk-social-links-2">
+                <li><a class="nk-social-facebook" href="#"><span class="fa fa-facebook"></span></a></li>
+                <li><a class="nk-social-google-plus" href="#"><span class="fa fa-google-plus"></span></a></li>
+                <li><a class="nk-social-twitter" href="#"><span class="fa fa-twitter"></span></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="nk-gap-1"></div>
+    <div class="row vertical-gap">
+        <div class="col-md-6">
+    <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" class="nk-btn nk-btn-rounded nk-btn-color-white nk-btn-block"/>
+        </div>
+        <div class="col-md-6">
+            <div class="mnt-5">
+                <small><a href="#">Forgot your password?</a></small>
+            </div>
+            <div class="mnt-5">
+                <small><a href="{{ path('fos_user_registration_register') }}">Not a member? Sign up</a></small>
+
+            </div>
+        </div>
+    </div>
+</form>

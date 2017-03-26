@@ -1,0 +1,6 @@
+entity_homepage:
+    path:     /
+    defaults: { _controller: EntityBundle:Default:index }
+back_homepage:
+    path:     /indexBack
+    defaults: { _controller: EntityBundle:Default:indexBack }
