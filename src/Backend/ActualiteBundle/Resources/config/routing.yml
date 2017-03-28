@@ -1,0 +1,3 @@
+backend_actualite_homepage:
+    path:     /
+    defaults: { _controller: BackendActualiteBundle:Default:index }

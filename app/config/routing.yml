@@ -1,3 +1,7 @@
+backend_actualite:
+    resource: "@BackendActualiteBundle/Resources/config/routing.yml"
+    prefix:   /
+
 backend_store:
     resource: "@BackendStoreBundle/Resources/config/routing.yml"
     prefix:   /

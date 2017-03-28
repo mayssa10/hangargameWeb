@@ -1,0 +1,21 @@
+{% extends '@Entity/index2.html.twig' %}
+
+
+{% block Body %}
+    <div class="nk-popup-gallery nk-popup-gallery-2-col nk-isotope" data-pswp-uid="1"
+         style="position: relative; height: 1709.4px;">
+
+    {% for actualite in actualites %}
+        <div class="nk-gallery-item-box nk-isotope-item parallaxed" data-mouse-parallax-z="5"
+             data-mouse-parallax-speed="1"
+             style="position: absolute; left: 0px; top: 0px; transform: translate3d(-4.86364px, -18.0659px, 0px);"><a
+                    href="assets/images/gallery-1.jpg" class="nk-gallery-item" data-size="1920x1640"><img
+                        src="assets/images/gallery-1-thumb.jpg" alt=""></a>
+            <div class="photoswipe-description">
+                <h4>{{ actualite.titre }}</h4>
+                {{ actualite.text }}
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}

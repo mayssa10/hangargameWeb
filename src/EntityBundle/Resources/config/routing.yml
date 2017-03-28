@@ -1,3 +1,7 @@
+entity_actualite:
+    resource: "@BackendActualiteBundle/Resources/config/routing/actualite.yml"
+    prefix:   /actualite
+
 entity_store:
     resource: "@FrontendStoreBundle/Resources/config/routing/store.yml"
     prefix:   /store
