@@ -2,11 +2,181 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73ec1a98-964b-4784-86c1-1278bda0b98d" name="Default" comment="">
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/store/index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/store/index.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/store/new.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/store/new.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EntityBundle/Resources/views/index2.html.twig" afterPath="$PROJECT_DIR$/src/EntityBundle/Resources/views/index2.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Frontend/StoreBundle/Controller/StoreController.php" afterPath="$PROJECT_DIR$/src/Frontend/StoreBundle/Controller/StoreController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Frontend/StoreBundle/Resources/config/routing/store.yml" afterPath="$PROJECT_DIR$/src/Frontend/StoreBundle/Resources/config/routing/store.yml" />
+=======
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploads/Images/Actualite/avatar-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploads/Images/Actualite/avatar-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploads/Images/Actualite/avatar-3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploads/Images/Actualite/avatar-4.jpg" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/EntityBundle/Resources/views/indexBack.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/jquery-fileupload/css/jquery.fileupload-ui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/jquery-fileupload/img/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/jquery-fileupload/img/progressbar.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/jquery-fileupload/js/canvas-to-blob.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/jquery-fileupload/js/jquery.blueimp-gallery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/jquery-fileupload/js/jquery.fileupload-audio.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/jquery-fileupload/js/jquery.fileupload-image.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/jquery-fileupload/js/jquery.fileupload-process.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/jquery-fileupload/js/jquery.fileupload-ui.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/jquery-fileupload/js/jquery.fileupload-validate.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/jquery-fileupload/js/jquery.fileupload-video.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/jquery-fileupload/js/jquery.fileupload.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/jquery-fileupload/js/load-image.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/jquery-fileupload/js/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/jquery-fileupload/js/tmpl.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/jquery-fileupload/js/vendor/jquery.ui.widget.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/js/demo-formvalidation.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/js/demo-mask.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/js/jquery-1.10.2.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/js/jqueryui-1.10.3.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/plugins/ckeditor/ckeditor.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/plugins/form-inputmask/jquery.inputmask.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/plugins/form-parsley/parsley.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/plugins/form-toggle/toggle.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/sparkline/easy-pie-chart.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/sparkline/jquery.customSelect.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/sparkline/jquery.sparkline.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/sparkline/sparkline-chart.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/switcher/a.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/switcher/b.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/switcher/c.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/switcher/d.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/switcher/e.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/switcher/f.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/switcher/g.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/switcher/h.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/switcher/i.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/switcher/j.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/switcher/moderziner.custom.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/switcher/switcher-defult.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/switcher/switcher.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/switcher/switcher.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/wizard-css/wizard_progress.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/wizard-js/jquery-latest.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/wizard-js/wizard.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/assets/wizard-js/wizard_bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/css/demo_page.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/css/demo_table.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/css/font-awesome.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/css/thin-admin.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/font-awesome-4.0.3/css/font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/font-awesome-4.0.3/fonts/fontawesome-webfontba72.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/font-awesome-4.0.3/fonts/fontawesome-webfontba72.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/font-awesome-4.0.3/fonts/fontawesome-webfontba72.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/font-awesome-4.0.3/fonts/fontawesome-webfontba72.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/font-awesome-4.0.3/fonts/fontawesome-webfontd41d.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/font/fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/font/fontawesome-webfontd41d.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/font/fontawesome-webfontf77b.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/font/fontawesome-webfontf77b.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/font/fontawesome-webfontf77b.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/fonts/glyphicons-halflings-regular-2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/fonts/glyphicons-halflings-regular-3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/fonts/glyphicons-halflings-regular-4.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/fonts/glyphicons-halflings-regular.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/fonts/glyphicons-halflings-regulard41d.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/images/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/images/a.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/images/avatar.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/images/b.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/images/back_disabled.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/images/back_enabled.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/images/back_enabled_hover.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/images/c.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/images/d.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/images/e.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/images/f.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/images/forward_disabled.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/images/forward_enabled.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/images/forward_enabled_hover.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/images/g.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/images/h.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/images/i.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/images/img1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/images/j.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/images/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/images/profile.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/images/search.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/images/spritemap.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/images/spritemap@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/images/switcher-arrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/images/user.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/img/close.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/img/gallery-photo/image-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/img/gallery-photo/image-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/img/gallery-photo/image-3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/img/gallery-photo/image-4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/img/gallery-photo/image-5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/img/gallery-photo/image-6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/img/gallery-photo/image-7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/img/gallery-photo/image-8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/img/gallery-photo/thumb-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/img/gallery-photo/thumb-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/img/gallery-photo/thumb-3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/img/gallery-photo/thumb-4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/img/gallery-photo/thumb-5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/img/gallery-photo/thumb-6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/img/gallery-photo/thumb-7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/img/gallery-photo/thumb-8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/img/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/img/next.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/img/prev.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/img/sort_asc_disabled.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/img/sort_both.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/img/sort_desc.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/img/sort_desc_disabled.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/javascript/bar-animated.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/javascript/bar-charts.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/javascript/donut-render.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/javascript/dropzone.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/javascript/fullcalendar.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/javascript/jqplot.barRenderer.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/javascript/jqplot.canvasAxisTickRenderer.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/javascript/jqplot.canvasTextRenderer.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/javascript/jqplot.categoryAxisRenderer.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/javascript/jqplot.cursor.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/javascript/jqplot.dateAxisRenderer.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/javascript/jqplot.donutRenderer.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/javascript/jqplot.highlighter.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/javascript/jqplot.logAxisRenderer.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/javascript/jqplot.pieRenderer.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/javascript/jqplot.pointLabels.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/javascript/jquery-1.10.2.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/javascript/jquery-ui.custom.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/javascript/jquery.172.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/javascript/jquery.jqplot.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/javascript/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/javascript/jquery.nestable.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/javascript/jquery191.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/javascript/lightbox-2.6.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/javascript/line-charts.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/javascript/pie-test.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/javascript/widget.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/js/jquery.dataTables.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/js/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/js/select-checkbox.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/js/smooth-sliding-menu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/js/to-do-admin.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/style/dashboard.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/style/dropzone.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/style/fullcalendar.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/style/fullcalendar.print.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/style/jquery.jqplot.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/style/lightbox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/style/nestable.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/style/screen.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundlesBack/style/style.css" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/actualite/index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/actualite/index.html.twig" />
+>>>>>>> f1743e6b6332ad72c73bc8f925d52b9c5400c456
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,9 +191,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index2.html.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index2.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/EntityBundle/Resources/views/index2.html.twig">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="404">
               <caret line="183" column="112" lean-forward="false" selection-start-line="183" selection-start-column="62" selection-end-line="183" selection-end-column="112" />
               <folding>
@@ -42,6 +213,11 @@
                 <element signature="e#4443#4455#0#Twig" expanded="true" />
                 <element signature="e#4748#4758#0#Twig" expanded="true" />
               </folding>
+=======
+            <state relative-caret-position="-15773">
+              <caret line="113" column="49" lean-forward="false" selection-start-line="113" selection-start-column="49" selection-end-line="113" selection-end-column="49" />
+              <folding />
+>>>>>>> f1743e6b6332ad72c73bc8f925d52b9c5400c456
             </state>
           </provider>
         </entry>
@@ -69,7 +245,13 @@
       <find>ima</find>
       <find>image</find>
       <find>container</find>
+<<<<<<< HEAD
       <find>single</find>
+=======
+      <find>{{ asset('bundlesBack/  ') }}</find>
+      <find>{{ asset('bundlesBack   ') }}</find>
+      <find>&lt;img src=&quot;images/img.jpg&quot; alt=&quot;&quot;&gt;</find>
+>>>>>>> f1743e6b6332ad72c73bc8f925d52b9c5400c456
     </findStrings>
     <replaceStrings>
       <replace>bundles</replace>
@@ -129,7 +311,6 @@
         <option value="$PROJECT_DIR$/src/EntityBundle/Resources/config/services.yml" />
         <option value="$PROJECT_DIR$/src/EntityBundle/Form/RegistrationType.php" />
         <option value="$PROJECT_DIR$/src/EntityBundle/Controller/DefaultController.php" />
-        <option value="$PROJECT_DIR$/src/EntityBundle/Resources/views/indexBack.html.twig" />
         <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Controller/RegistrationController.php" />
         <option value="$PROJECT_DIR$/src/EntityBundle/Redirection/AfterLoginRedirection.php" />
         <option value="$PROJECT_DIR$/src/EntityBundle/Resources/views/inscription.html.twig" />
@@ -153,12 +334,16 @@
         <option value="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Backend/ActualiteBundle/Form/ActualiteType.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/actualite/index.html.twig" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/EntityBundle/Resources/views/index2.html.twig" />
         <option value="$PROJECT_DIR$/src/Frontend/StoreBundle/Controller/StoreController.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/store/listeStore.html.twig" />
         <option value="$PROJECT_DIR$/src/Frontend/StoreBundle/Resources/config/routing/store.yml" />
         <option value="$PROJECT_DIR$/app/Resources/views/store/index.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/store/new.html.twig" />
+=======
+        <option value="$PROJECT_DIR$/src/EntityBundle/Resources/views/indexBack.html.twig" />
+>>>>>>> f1743e6b6332ad72c73bc8f925d52b9c5400c456
       </list>
     </option>
   </component>
@@ -215,7 +400,11 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD
               <option name="myItemId" value="src" />
+=======
+              <option name="myItemId" value="web" />
+>>>>>>> f1743e6b6332ad72c73bc8f925d52b9c5400c456
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -229,6 +418,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -264,6 +454,13 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Resources" />
+=======
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bundlesBack" />
+>>>>>>> f1743e6b6332ad72c73bc8f925d52b9c5400c456
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -330,13 +527,8 @@
               <option name="myItemId" value="routing" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="hangargameWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
+<<<<<<< HEAD
               <option name="myItemId" value="hangargameWeb" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -346,6 +538,19 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Frontend" />
+=======
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hangargameWeb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hangargameWeb" />
+>>>>>>> f1743e6b6332ad72c73bc8f925d52b9c5400c456
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -353,7 +558,11 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD
               <option name="myItemId" value="Controller" />
+=======
+              <option name="myItemId" value="Backend" />
+>>>>>>> f1743e6b6332ad72c73bc8f925d52b9c5400c456
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -371,7 +580,11 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD
               <option name="myItemId" value="EntityBundle" />
+=======
+              <option name="myItemId" value="AppBundle" />
+>>>>>>> f1743e6b6332ad72c73bc8f925d52b9c5400c456
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -436,6 +649,7 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+<<<<<<< HEAD
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -498,6 +712,8 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+=======
+>>>>>>> f1743e6b6332ad72c73bc8f925d52b9c5400c456
             <PATH_ELEMENT>
               <option name="myItemId" value="Resources" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
@@ -516,6 +732,16 @@
     <property name="js.eslint.eslintPackage" value="" />
   </component>
   <component name="RecentsManager">
+<<<<<<< HEAD
+=======
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\hangargameWeb\web\bundlesBack" />
+      <recent name="C:\wamp64\www\hangargameWeb\web\uploads\Images\Actualite" />
+      <recent name="C:\wamp64\www\hangargameWeb\src\EntityBundle" />
+      <recent name="C:\wamp64\www\PiHangarGame\src\Frontend\StoreBundle" />
+      <recent name="C:\wamp64\www\PiHangarGame\web\bundles\assets" />
+    </key>
+>>>>>>> f1743e6b6332ad72c73bc8f925d52b9c5400c456
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\hangargameWeb\src\Backend\ActualiteBundle\Resources\config" />
       <recent name="C:\wamp64\www\hangargameWeb\src\Backend\ActualiteBundle" />
@@ -605,19 +831,31 @@
       <workItem from="1490444045776" duration="15202000" />
       <workItem from="1490472340018" duration="5254000" />
       <workItem from="1490534768775" duration="27913000" />
+<<<<<<< HEAD
       <workItem from="1490634777829" duration="3623000" />
       <workItem from="1490716486648" duration="8165000" />
+=======
+      <workItem from="1490634777829" duration="12444000" />
+>>>>>>> f1743e6b6332ad72c73bc8f925d52b9c5400c456
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="85329000" />
+=======
+    <option name="totallyTimeSpent" value="85985000" />
+>>>>>>> f1743e6b6332ad72c73bc8f925d52b9c5400c456
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
+<<<<<<< HEAD
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20058565" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2015625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> f1743e6b6332ad72c73bc8f925d52b9c5400c456
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -668,6 +906,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/Frontend/StoreBundle/Resources/views/ajouterStore.html.twig" />
     <entry file="file://$PROJECT_DIR$/src/EntityBundle/Entity/Annonces.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -717,6 +956,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> f1743e6b6332ad72c73bc8f925d52b9c5400c456
     <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/EventListener/AuthenticationListener.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -850,6 +1091,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/EntityBundle/Form/ActualiteType.php" />
     <entry file="file://$PROJECT_DIR$/src/EntityBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
@@ -862,6 +1104,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" column="39" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/EntityBundle/Form/ActualiteType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> f1743e6b6332ad72c73bc8f925d52b9c5400c456
           <folding />
         </state>
       </provider>
@@ -923,16 +1171,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/EntityBundle/Entity/Actualite.php">
+    <entry file="file://$PROJECT_DIR$/src/Backend/StoreBundle/Resources/views/Default/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="109" column="1" lean-forward="false" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Backend/StoreBundle/Resources/views/Default/index.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Backend/ActualiteBundle/Form/ActualiteType.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
@@ -942,10 +1191,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="26" />
+=======
+        <state relative-caret-position="330">
+          <caret line="18" column="63" lean-forward="false" selection-start-line="18" selection-start-column="63" selection-end-line="18" selection-end-column="63" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/store/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="23" column="46" lean-forward="false" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
+>>>>>>> f1743e6b6332ad72c73bc8f925d52b9c5400c456
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/web/uploads/Images/Stores/3c323dbdc5302b891c4e9a44fb6e3802.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -955,11 +1217,36 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="71" lean-forward="false" selection-start-line="12" selection-start-column="71" selection-end-line="12" selection-end-column="71" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> f1743e6b6332ad72c73bc8f925d52b9c5400c456
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+=======
+    <entry file="file://$PROJECT_DIR$/web/uploads/Images/Stores/3c323dbdc5302b891c4e9a44fb6e3802.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/store/new.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="78" column="53" lean-forward="false" selection-start-line="78" selection-start-column="53" selection-end-line="78" selection-end-column="53" />
+          <folding>
+            <element signature="e#621#699#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/actualite/new.html.twig">
+>>>>>>> f1743e6b6332ad72c73bc8f925d52b9c5400c456
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -980,28 +1267,55 @@
         <state relative-caret-position="87">
           <caret line="18" column="63" lean-forward="false" selection-start-line="18" selection-start-column="63" selection-end-line="18" selection-end-column="63" />
           <folding>
+<<<<<<< HEAD
             <element signature="e#49#89#0#PHP" expanded="false" />
+=======
+            <element signature="e#12#26#0#Twig" expanded="false" />
+>>>>>>> f1743e6b6332ad72c73bc8f925d52b9c5400c456
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/EntityBundle/Resources/views/indexBack.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="53" lean-forward="false" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/EntityBundle/Entity/Actualite.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="42" column="18" lean-forward="false" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="18" />
+>>>>>>> f1743e6b6332ad72c73bc8f925d52b9c5400c456
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
           <caret line="38" column="15" lean-forward="false" selection-start-line="38" selection-start-column="15" selection-end-line="38" selection-end-column="15" />
+=======
+    <entry file="file://$PROJECT_DIR$/web/uploads/Images/Actualite/avatar-1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Backend/ActualiteBundle/Resources/views/Default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> f1743e6b6332ad72c73bc8f925d52b9c5400c456
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/Resources/views/store/edit.html.twig">
+=======
+    <entry file="file://$PROJECT_DIR$/src/Backend/ActualiteBundle/BackendActualiteBundle.php">
+>>>>>>> f1743e6b6332ad72c73bc8f925d52b9c5400c456
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
@@ -1009,6 +1323,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/Resources/views/store/listeStore.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
@@ -1024,10 +1339,28 @@
           <folding>
             <element signature="e#510#533#0#PHP" expanded="true" />
             <element signature="e#2125#2147#0#PHP" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/Backend/ActualiteBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="39" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-74">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="e#198#245#0#Twig" expanded="false" />
+            <element signature="e#3076#3123#0#Twig" expanded="false" />
+>>>>>>> f1743e6b6332ad72c73bc8f925d52b9c5400c456
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/Frontend/StoreBundle/Resources/config/routing/store.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -1042,10 +1375,34 @@
           <caret line="183" column="112" lean-forward="false" selection-start-line="183" selection-start-column="62" selection-end-line="183" selection-end-column="112" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/web/bundlesBack/vendors/eve/e.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/uploads/Images/Actualite/avatar-4.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/actualite/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="81" />
+          <folding>
+            <element signature="e#12#36#0#Twig" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+>>>>>>> f1743e6b6332ad72c73bc8f925d52b9c5400c456
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/Resources/views/store/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1053,17 +1410,97 @@
           <folding>
             <element signature="e#226#304#0#HTML" expanded="true" />
           </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/web/bundlesBack/src/js/helpers/smartresize.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+>>>>>>> f1743e6b6332ad72c73bc8f925d52b9c5400c456
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/store/new.html.twig">
+    <entry file="file://$PROJECT_DIR$/web/bundlesBack/css/maps/jquery-jvectormap-2.0.3.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="155">
           <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
           <folding>
             <element signature="e#4443#4455#0#Twig" expanded="true" />
             <element signature="e#4748#4758#0#Twig" expanded="true" />
+=======
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundlesBack/build/js/custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundlesBack/documentation/js/shCore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EntityBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EntityBundle/Resources/views/indexBack.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-61">
+          <caret line="243" column="82" lean-forward="false" selection-start-line="243" selection-start-column="82" selection-end-line="243" selection-end-column="82" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#2;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#2;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#2;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#div#0;n#div#2;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#3;n#div#1;n#div#0;n#div#0;n#div#2;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#4;n#div#1;n#div#0;n#div#0;n#div#2;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#1;n#table#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#2;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#42665#42671#0#HTML" expanded="true" />
+            <element signature="e#43238#43244#0#HTML" expanded="true" />
+            <element signature="e#43775#43781#0#HTML" expanded="true" />
+            <element signature="e#44348#44354#0#HTML" expanded="true" />
+            <element signature="e#44885#44891#0#HTML" expanded="true" />
+            <element signature="e#45458#45464#0#HTML" expanded="true" />
+            <element signature="e#45995#46001#0#HTML" expanded="true" />
+            <element signature="e#46568#46574#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#3;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+>>>>>>> f1743e6b6332ad72c73bc8f925d52b9c5400c456
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EntityBundle/Resources/views/index2.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-15773">
+          <caret line="113" column="49" lean-forward="false" selection-start-line="113" selection-start-column="49" selection-end-line="113" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>

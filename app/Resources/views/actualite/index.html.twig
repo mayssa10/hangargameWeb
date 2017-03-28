@@ -6,11 +6,11 @@
          style="position: relative; height: 1709.4px;">
 
     {% for actualite in actualites %}
-        <div class="nk-gallery-item-box nk-isotope-item parallaxed" data-mouse-parallax-z="5"
+        <div class="nk-gallery-item-box nk-isotope-item parallaxed col-3" data-mouse-parallax-z="5"
              data-mouse-parallax-speed="1"
              style="position: absolute; left: 0px; top: 0px; transform: translate3d(-4.86364px, -18.0659px, 0px);"><a
-                    href="assets/images/gallery-1.jpg" class="nk-gallery-item" data-size="1920x1640"><img
-                        src="assets/images/gallery-1-thumb.jpg" alt=""></a>
+                    href='{{asset('uploads/Images/Actualite/'~actualite.image)}}' class="nk-gallery-item " data-size="1920x1640"><img
+                        src='{{asset('uploads/Images/Actualite/'~actualite.image)}}'  alt="" ><h4>{{ actualite.titre }}</h4></a>
             <div class="photoswipe-description">
                 <h4>{{ actualite.titre }}</h4>
                 {{ actualite.text }}
