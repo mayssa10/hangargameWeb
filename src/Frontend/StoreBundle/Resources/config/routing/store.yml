@@ -1,5 +1,5 @@
 store_index:
-    path:     /
+    path:     /showAll
     defaults: { _controller: "FrontendStoreBundle:Store:index" }
     methods:  GET
 

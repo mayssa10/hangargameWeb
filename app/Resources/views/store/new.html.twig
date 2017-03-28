@@ -99,10 +99,16 @@
 
                                     <td class="nk-product-cart-total">{{ store.city }}</td>
 
+
                                     <td class="nk-product-cart-remove"><a
                                                 href="{{ path('store_delete',{'id':store.id}) }}"> <span
                                                     class="ion-trash-b"></span></a>
                                     </td>
+                                    <td class="nk-product-cart-remove"><a
+                                                href="{{ path('store_edit',{'id':store.id}) }}"> <span
+                                                    class="ion-edit"></span></a>
+                                    </td>
+
 
                                 </tr>
                             {% endfor %}
