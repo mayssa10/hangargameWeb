@@ -1,0 +1,80 @@
+{% extends '@Entity/index2.html.twig' %}
+
+ {% block titreImage %}
+<div class="nk-main">
+    <!-- START: Header Title --><!--
+            Additional Classes:
+                .nk-header-title-sm
+                .nk-header-title-md
+                .nk-header-title-lg
+                .nk-header-title-xl
+                .nk-header-title-full
+                .nk-header-title-parallax
+                .nk-header-title-parallax-opacity
+                .nk-header-title-boxed
+            -->
+
+    <div class="nk-header-title nk-header-title-lg nk-header-title-parallax-opacity">
+        <div class="bg-image">
+            <div style="background-image: url({{ asset('bundles/assets/images/image-1.jpg') }}"></div>
+        </div>
+
+        <div class="nk-header-table">
+            <div class="nk-header-table-cell">
+                <div class="container">
+                    <div class="nk-header-text">
+                        <h1 class="nk-title display-3">Ajouter vos produits !</h1>
+                        <div class="nk-gap-2"></div>
+
+
+                        <div class="nk-gap-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+    {% block Body %}
+
+
+
+<div class="nk-gap-4"></div>
+<div class="container">
+    <div class="row center-block">
+        <div class="col-md-6">
+            <div class="nk-box-3 bg-dark-1">
+                <h2 class="nk-title h3 text-center">Ajouter vos produits</h2>
+                <div class="nk-gap-1"></div>
+                <!-- START: Form 1 -->
+
+                 {{ form_start(form,{'attr':{'class':'nk-form nk-form-style-1'}} ) }}
+
+
+
+                   {{ form_widget(form.nom,{'attr':{'class':'form-control required','placeholder':'Nom du produit*' | trans }}) }}
+
+                    <div class="nk-gap"></div>
+                    {{ form_widget(form.prix,{'attr':{'class':'form-control required','placeholder':'Prix*' | trans }}) }}
+                    <div class="nk-gap"></div>
+                    {{ form_widget(form.description,{'attr':{'class':'form-control required','placeholder':'Description*' | trans }}) }}
+                    <div class="nk-gap"></div>
+                    {{ form_widget(form.image,{'attr':{'class':'form-control required','placeholder':'Image*' | trans }}) }}
+                    <div class="nk-gap"></div>
+                    <div class="nk-form-response-success"></div>
+                    <div class="nk-form-response-error"></div>
+
+                 <input type="submit" value="Ajouter " tabindex="4" class="nk-btn nk-btn-rounded nk-btn-color-danger nk-btn-block" />
+                 {{ form_end(form) }}
+                <!-- END: Form 1 -->
+            </div>
+        </div>
+
+    </div>
+    <div class="clearfix"></div>
+    <div class="nk-gap-1"></div>
+
+</div>
+<div class="nk-gap-4"></div>
+<div class="nk-gap-4"></div>
+{% endblock %}

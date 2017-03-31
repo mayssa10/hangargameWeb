@@ -87,7 +87,7 @@
                                         </a>
                                     </td>
                                     <td class="nk-product-cart-title">
-                                        <h2 class="nk-post-title h5"><a href="store-product.html">{{ store.nom }}</a>
+                                        <h2 class="nk-post-title h5"><a href="{{ path('produit_new',{'id':store.id}) }}">{{ store.nom }}</a>
                                         </h2>
                                     </td>
                                     <td class="nk-product-cart-price">{{ store.description }}
@@ -106,9 +106,12 @@
                                     </td>
                                     <td class="nk-product-cart-remove"><a
                                                 href="{{ path('store_edit',{'id':store.id}) }}"> <span
-                                                    class="ion-edit"></span></a>
+                                                    class="ion-edit" ></span></a>
                                     </td>
-
+                                    <td class="nk-product-cart-remove"><a
+                                                href="{{  path('produit_new',{'id':store.id}) }}"> <span
+                                                    class="ion-android-add-circle"></span></a>
+                                    </td>
 
                                 </tr>
                             {% endfor %}
@@ -181,6 +184,9 @@
 
     </div> {{ form_end(form) }}
 <!-- END: Modal -->
+
+
+
 
     <div class="nk-gap-2"></div>
     <div class="nk-gap-2"></div>

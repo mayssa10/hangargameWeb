@@ -63,6 +63,7 @@ class StoreController extends Controller
             'store' => $store,
             'form' => $form->createView(),'stores' => $stores,
             'nbElements'=>$nb,
+
         ));
     }
 

@@ -1,0 +1,95 @@
+{% extends '@Entity/index2.html.twig' %}
+
+ {% block titreImage %}
+<div class="nk-main">
+    <!-- START: Header Title --><!--
+            Additional Classes:
+                .nk-header-title-sm
+                .nk-header-title-md
+                .nk-header-title-lg
+                .nk-header-title-xl
+                .nk-header-title-full
+                .nk-header-title-parallax
+                .nk-header-title-parallax-opacity
+                .nk-header-title-boxed
+            -->
+
+    <div class="nk-header-title nk-header-title-lg nk-header-title-parallax-opacity">
+        <div class="bg-image">
+            <div style="background-image: url({{ asset('bundles/assets/images/image-1.jpg') }}"></div>
+        </div>
+
+        <div class="nk-header-table">
+            <div class="nk-header-table-cell">
+                <div class="container">
+                    <div class="nk-header-text">
+                        <h1 class="nk-title display-3">Vos produits</h1>
+                        <div class="nk-gap-2"></div>
+
+
+                        <div class="nk-gap-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+    {% block Body %}
+<div class="nk-main">
+    <div class="container">
+        <div class="nk-gap-4"></div>
+        <div class="nk-store-product">
+            <div class="row xl-gap vertical-gap align-items-center">
+                <div class="col-md-5">
+                {%  for produit in produit %}
+                 {% set lien = app.request.getBaseURL() ~ '/uploads/Images/Stores/' ~ produit.image %}
+                    <!-- START: Product Photos Carousel -->
+                    <div class="nk-carousel-3" data-size="1">
+                        <div class="nk-carousel-inner nk-popup-gallery">
+                            <div>
+                                <div>
+                                    <a href="assets/images/product-4.png" class="nk-gallery-item" data-size="780x990"><img  src="{{ lien }}" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <a href="assets/images/product-4-blue.png" class="nk-gallery-item" data-size="780x990"><img  src="{{ lien }}" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <a href="assets/images/product-4-green.png" class="nk-gallery-item" data-size="780x990"><img  src="{{ lien }}" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <a href="assets/images/product-4-orange.png" class="nk-gallery-item" data-size="780x990"><img  src="{{ lien }}" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Product Photos Carousel -->
+                </div>
+                <div class="col-md-7">
+                    <h2 class="nk-product-title">{{ produit.nom }}</h2>
+                    <div class="nk-product-description">
+                        <p>{{ produit.description }}</p>
+                    </div>
+
+
+                    <form action="#" class="nk-form nk-product-addtocart">
+                        <button class="nk-btn nk-btn-x2 link-effect-4">Aimer</button> <span class="nk-product-price">{{ produit.prix }} <del>$145.00</del></span>
+                    </form>
+                </div>
+            </div>
+             {% endfor %}
+            <div class="nk-gap-3"></div>
+        </div>
+    </div>
+</div>
+    {% endblock %}

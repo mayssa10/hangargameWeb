@@ -1,21 +1,115 @@
-{% extends 'base.html.twig' %}
+{% extends '@Entity/index2.html.twig' %}
 
-{% block body %}
-    <h1>Store edit</h1>
+ {% block titreImage %}
+<div class="nk-main">
+    <!-- START: Header Title --><!--
+            Additional Classes:
+                .nk-header-title-sm
+                .nk-header-title-md
+                .nk-header-title-lg
+                .nk-header-title-xl
+                .nk-header-title-full
+                .nk-header-title-parallax
+                .nk-header-title-parallax-opacity
+                .nk-header-title-boxed
+            -->
 
-    {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit" />
-    {{ form_end(edit_form) }}
+    <div class="nk-header-title nk-header-title-lg nk-header-title-parallax-opacity">
+        <div class="bg-image">
+            <div style="background-image: url({{ asset('bundles/assets/images/image-1.jpg') }}"></div>
+        </div>
 
-    <ul>
-        <li>
-            <a href="{{ path('store_index') }}">Back to the list</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
-{% endblock %}
+        <div class="nk-header-table">
+            <div class="nk-header-table-cell">
+                <div class="container">
+                    <div class="nk-header-text">
+                        <h1 class="nk-title display-3">Modifier votre store</h1>
+                        <div class="nk-gap-2"></div>
+
+
+                        <div class="nk-gap-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+
+    {% block Body %}
+    <body>
+    <div class="container">
+
+        <div class="nk-store nk-store-checkout ">
+            <br>
+            <br>
+            <h3 class="nk-decorated-h-2"><span><span class="text-main-1">Modifier votre store</span> </span></h3>
+
+            <!-- START: Billing Details -->
+            <div class="nk-gap"></div>
+    {{ form_start(edit_form,{'attr':{'class':'nk-form nk-form-style-1'}} ) }}
+    <div class="row vertical-gap">
+        <div class="col-lg-6">
+            <div class="row vertical-gap">
+                <div class="col-sm-6">
+                    <label for="fname">Nom de votre store:  <span class="text-main-1">*</span>:</label>
+                    {{ form_widget(edit_form.nom,{'attr':{'class':'form-control required','placeholder':'prenom' | trans }})  }}
+                </div>
+            </div>
+            <div class="nk-gap-1"></div>
+
+                    <label for="lname">Description <span class="text-main-1">*</span>:</label>
+                    {{ form_widget(edit_form.description,{'attr':{'class':'form-control required','placeholder':'nom' | trans }})  }}
+
+            <div class="row vertical-gap">
+                <div class="col-sm-6">
+                    <label for="lname">Gouvernerat <span class="text-main-1">*</span>:</label>
+                    {{ form_widget(edit_form.country,{'attr':{'class':'form-control required','placeholder':'form.username'|trans}})  }}
+                </div>
+                <div class="col-sm-6">
+                    <label for="lname">Ville<span class="text-main-1">*</span>:</label>
+                    {{ form_widget(edit_form.city,{'attr':{'class':'form-control required','placeholder':'telephone'|trans}})  }}
+                </div>
+                <div class="col-sm-6">
+                    <label for="lname">Image: <span class="text-main-1">*</span>:</label>
+                    {{ form_widget(edit_form.image,{'attr':{'class':'form-control required','placeholder':'telephone'|trans}})  }}
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div class="nk-gap-1"></div>
+    <div class="row vertical-gap">
+        <div class="col-md-6">
+            <input type="submit" value="Modifier " tabindex="4" class="nk-btn nk-btn-rounded nk-btn-color-white nk-btn-block" />
+        </div>
+
+    </div>
+</div>
+{{ form_end(edit_form) }}
+    </div>
+
+
+        <div class="nk-gap-2"></div>
+        <div class="nk-gap-2"></div>
+        <div class="nk-gap-2"></div>
+        <div class="nk-gap-2"></div>
+        <div class="nk-gap-2"></div>
+        <div class="nk-gap-2"></div>
+    {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
