@@ -15,7 +15,8 @@ imports:
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: fr
-    bugs_directory: '%kernel.root_dir%/../web/uploads/Images/Stores'
+    stores_directory: '%kernel.root_dir%/../web/uploads/Images/Stores'
+    product_directory: '%kernel.root_dir%/../web/uploads/Images/Produits'
 
 framework:
     #esi:             ~

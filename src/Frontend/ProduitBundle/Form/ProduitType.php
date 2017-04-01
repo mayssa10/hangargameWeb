@@ -5,8 +5,9 @@ namespace Frontend\ProduitBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-
+use Symfony\Component\Form\Extension\Core\Type\TimeType;
 class ProduitType extends AbstractType
+
 {
     /**
      * {@inheritdoc}
@@ -14,6 +15,8 @@ class ProduitType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('nom')->add('description')->add('prix')->add('image');
+
+
     }
     
     /**

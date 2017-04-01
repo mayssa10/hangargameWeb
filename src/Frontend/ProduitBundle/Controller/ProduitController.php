@@ -5,6 +5,7 @@ namespace Frontend\ProduitBundle\Controller;
 use EntityBundle\Entity\Produit;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use DateTime;
 
 /**
  * Produit controller.
@@ -38,7 +39,9 @@ class ProduitController extends Controller
         $form->handleRequest($request);
         $id= $request->get('id');
         $produit->setStore($id);
-
+        $now=new DateTime();
+        $now->format('d-m-y');
+   $produit->setDate($now);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $file = $produit->getImage();
@@ -48,7 +51,7 @@ class ProduitController extends Controller
 
             // Move the file to the directory where brochures are stored
             $file->move(
-                $this->getParameter('bugs_directory'), $fileName
+                $this->getParameter('product_directory'), $fileName
             );
             $produit->setImage($fileName);
 
@@ -69,13 +72,35 @@ class ProduitController extends Controller
      * Finds and displays a produit entity.
      *
      */
-    public function showAction(Produit $produit)
+    public function showAction(Request $request)
     {
-        $deleteForm = $this->createDeleteForm($produit);
+        $id=$request->get('id');
+
+        $em = $this->getDoctrine()->getManager();
+
+
+        $queryForListProduit = $em->createQuery("select p from EntityBundle\Entity\Produit p where p.store = $id");
+        $produit = $queryForListProduit->getResult();
+
+        $repository = $this->getDoctrine()->getRepository('EntityBundle:Produit');
+
+        // query for a single product matching the given name and price
+
+        if(isset($_GET['like']))
+        { $idp= $_GET['idp'];
+            $m = $repository->findOneBy(array('id'=>$idp));
+
+            $em = $this->getDoctrine()->getManager();
+            $prod = $em->getRepository('EntityBundle:Produit')->find($m);
+
+            $prod->setLikes($_GET['like']+1);
+        $em->persist($prod);
+        $em->flush();}
+
 
         return $this->render('produit/show.html.twig', array(
             'produit' => $produit,
-            'delete_form' => $deleteForm->createView(),
+
         ));
     }
 
