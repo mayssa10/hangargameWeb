@@ -7,6 +7,9 @@ imports:
     - { resource: "@BackendStoreBundle/Resources/config/services.yml" }
     - { resource: "@BackendActualiteBundle/Resources/config/services.yml" }
     - { resource: "@FrontendProduitBundle/Resources/config/services.yml" }
+    - { resource: "@FrontendEvenementBundle/Resources/config/services.yml" }
+    - { resource: "@FrontendTournoiBundle/Resources/config/services.yml" }
+    - { resource: "@BackendEvenementBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration

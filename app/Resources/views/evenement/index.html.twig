@@ -1,0 +1,68 @@
+{% extends '@Entity/index2.html.twig' %}
+{% block titreImage %}
+<div class="nk-main">
+    <!-- START: Header Title --><!--
+            Additional Classes:
+                .nk-header-title-sm
+                .nk-header-title-md
+                .nk-header-title-lg
+                .nk-header-title-xl
+                .nk-header-title-full
+                .nk-header-title-parallax
+                .nk-header-title-parallax-opacity
+                .nk-header-title-boxed
+            -->
+
+    <div class="nk-header-title nk-header-title-lg nk-header-title-parallax-opacity">
+        <div class="bg-image">
+            <div style="background-image: url({{ asset('bundles/assets/images/image-1.jpg') }}"></div>
+        </div>
+
+        <div class="nk-header-table">
+            <div class="nk-header-table-cell">
+                <div class="container">
+                    <div class="nk-header-text">
+                        <h1 class="nk-title display-3">Nos evenements ! </h1>
+                        <div class="nk-gap-2"></div>
+
+
+                        <div class="nk-gap-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+
+{% block Body %}
+<div class="nk-box">
+    <div class="nk-gap-4"></div>
+
+    <div class="container">
+
+        <div class="row vertical-gap lg-gap">
+        {% for evenement in evenements %}
+            <div class="col-md-6">
+
+                <blockquote class="nk-testimonial-2">
+                    <div class="nk-testimonial-photo" style="background-image: url({{ asset('bundles/assets/images/avatar-2-sm.jpg') }}"></div>
+                    <div class="nk-testimonial-photo"></div>
+                    <div class="nk-testimonial-name h1"><em> {{ evenement.nom  }}</em> </div>
+                    <div class="nk-testimonial-body">{{ evenement.description }}</div>
+                    <div class="nk-testimonial-name h4">{{ evenement.adresse }}</div>
+                    <div class="nk-testimonial-source">{{ evenement.datedebut |date('Y/m/d') }}</div>
+                    <div class="nk-testimonial-source">{{ evenement.datefin |date('Y/m/d') }}</div>
+                </blockquote>
+
+            </div>
+  {% endfor %}
+        </div>
+
+
+    </div>
+
+    <div class="nk-gap-4"></div>
+    <div class="nk-gap-4"></div>
+</div>
+{% endblock %}

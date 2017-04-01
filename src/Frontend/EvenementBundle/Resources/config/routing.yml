@@ -1,0 +1,3 @@
+frontend_evenement_homepage:
+    path:     /
+    defaults: { _controller: FrontendEvenementBundle:Default:index }

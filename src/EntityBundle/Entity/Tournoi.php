@@ -66,6 +66,118 @@ class Tournoi
      */
     private $idGamer;
 
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNom()
+    {
+        return $this->nom;
+    }
+
+    /**
+     * @param string $nom
+     */
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNomJeu()
+    {
+        return $this->nomJeu;
+    }
+
+    /**
+     * @param string $nomJeu
+     */
+    public function setNomJeu($nomJeu)
+    {
+        $this->nomJeu = $nomJeu;
+    }
+
+    /**
+     * @return int
+     */
+    public function getNbrMax()
+    {
+        return $this->nbrMax;
+    }
+
+    /**
+     * @param int $nbrMax
+     */
+    public function setNbrMax($nbrMax)
+    {
+        $this->nbrMax = $nbrMax;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getDatedebut()
+    {
+        return $this->datedebut;
+    }
+
+    /**
+     * @param \DateTime $datedebut
+     */
+    public function setDatedebut($datedebut)
+    {
+        $this->datedebut = $datedebut;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getDatefin()
+    {
+        return $this->datefin;
+    }
+
+    /**
+     * @param \DateTime $datefin
+     */
+    public function setDatefin($datefin)
+    {
+        $this->datefin = $datefin;
+    }
+
+    /**
+     * @return \Gamer
+     */
+    public function getIdGamer()
+    {
+        return $this->idGamer;
+    }
+
+    /**
+     * @param \Gamer $idGamer
+     */
+    public function setIdGamer($idGamer)
+    {
+        $this->idGamer = $idGamer;
+    }
+
 
 }
 

@@ -84,8 +84,8 @@
                             </li>
                             <li><a><i class="fa fa-edit"></i> Gestion d'evenement  <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="form.html">General Form</a></li>
-                                    <li><a href="form_advanced.html">Advanced Components</a></li>
+                                    <li><a href="{{ path('evenement_new') }}">Ajouter Evenement</a></li>
+                                    <li><a href="{{ path('evenement_show') }}">Liste des Evenements</a></li>
                                     <li><a href="form_validation.html">Form Validation</a></li>
                                     <li><a href="form_wizards.html">Form Wizard</a></li>
                                     <li><a href="form_upload.html">Form Upload</a></li>
@@ -329,6 +329,9 @@
 
         <!-- page content -->
         <div class="right_col" role="main">
+
+
+            {% block BodyBack %}
             <!-- top tiles -->
             <div class="row tile_count">
                 <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
@@ -1023,15 +1026,9 @@
             </div>
         </div>
         <!-- /page content -->
-
-        <!-- footer content -->
-        <footer>
-            <div class="pull-right">
-                Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-            </div>
-            <div class="clearfix"></div>
-        </footer>
+        {% endblock %}
         <!-- /footer content -->
+    </div>
     </div>
 </div>
 

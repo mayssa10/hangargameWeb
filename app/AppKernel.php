@@ -22,6 +22,9 @@ class AppKernel extends Kernel
             new Backend\StoreBundle\BackendStoreBundle(),
             new Backend\ActualiteBundle\BackendActualiteBundle(),
             new Frontend\ProduitBundle\FrontendProduitBundle(),
+            new Frontend\EvenementBundle\FrontendEvenementBundle(),
+            new Frontend\TournoiBundle\FrontendTournoiBundle(),
+            new Backend\EvenementBundle\BackendEvenementBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

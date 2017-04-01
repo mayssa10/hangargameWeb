@@ -1,0 +1,82 @@
+{% extends '@Entity/indexBack.html.twig' %}
+{% block BodyBack %}
+
+<body>
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+            <div class="">
+                <div class="page-title">
+                    <div class="title_left">
+                        <h3>Evenement <small>Liste des Evenements</small></h3>
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <div class="row">
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>Table <small>des evenements</small></h2>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Nom</th>
+                                        <th>Description</th>
+                                        <th>Adresse</th>
+                                        <th>Date Debut</th>
+                                        <th>Date Fin</th>
+                                        <th>Gestion</th>
+
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for evenement in evenements %}
+                                    <tr>
+
+
+                                            <td>{{ evenement.id }}</td>
+                                            <td>{{ evenement.nom }}</td>
+                                        <td>{{ evenement.description }}</td>
+                                        <td>{{ evenement.adresse }}</td>
+                                        <td>{{ evenement.datedebut |date('Y/m/d') }}</td>
+                                        <td>{{ evenement.datefin |date('Y/m/d') }}</td>
+                                        <td>
+
+                                        </td>
+
+
+                                    </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+
+        <!-- /footer content -->
+    </div>
+</div>
+</body>
+{% endblock %}

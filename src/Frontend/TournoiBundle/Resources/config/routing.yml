@@ -1,0 +1,3 @@
+frontend_tournoi_homepage:
+    path:     /
+    defaults: { _controller: FrontendTournoiBundle:Default:index }
