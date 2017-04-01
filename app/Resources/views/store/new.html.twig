@@ -81,13 +81,13 @@
                                     <td class="nk-product-cart-thumb">
                                         {% set lien = app.request.getBaseURL() ~ '/uploads/Images/Stores/' ~ store.image %}
 
-                                        <a href="store-product.html" class="nk-post-image"><img
+                                        <a href="{{ path('produit_show',{'id':store.id}) }}" class="nk-post-image"><img
                                                     src="{{ lien }}"
                                                     class="nk-img">
                                         </a>
                                     </td>
                                     <td class="nk-product-cart-title">
-                                        <h2 class="nk-post-title h5"><a href="{{ path('produit_new',{'id':store.id}) }}">{{ store.nom }}</a>
+                                        <h2 class="nk-post-title h5"><a href="{{ path('produit_show',{'id':store.id}) }}">{{ store.nom }}</a>
                                         </h2>
                                     </td>
                                     <td class="nk-product-cart-price">{{ store.description }}

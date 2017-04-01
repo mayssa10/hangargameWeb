@@ -48,7 +48,7 @@ class StoreController extends Controller
 
             // Move the file to the directory where brochures are stored
             $file->move(
-                $this->getParameter('bugs_directory'), $fileName
+                $this->getParameter('stores_directory'), $fileName
             );
             $store->setImage($fileName);
 
@@ -87,20 +87,20 @@ class StoreController extends Controller
      */
     public function editAction(Request $request, Store $store)
     {
-        $deleteForm = $this->createDeleteForm($store);
+
         $editForm = $this->createForm('Frontend\StoreBundle\Form\StoreType', $store);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('store_edit', array('id' => $store->getId()));
+            return $this->redirectToRoute('store_new', array('id' => $store->getId()));
         }
 
         return $this->render('store/edit.html.twig', array(
             'store' => $store,
             'edit_form' => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
+
         ));
     }
 

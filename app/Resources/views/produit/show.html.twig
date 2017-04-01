@@ -1,3 +1,6 @@
+
+
+
 {% extends '@Entity/index2.html.twig' %}
 
  {% block titreImage %}
@@ -16,14 +19,14 @@
 
     <div class="nk-header-title nk-header-title-lg nk-header-title-parallax-opacity">
         <div class="bg-image">
-            <div style="background-image: url({{ asset('bundles/assets/images/image-1.jpg') }}"></div>
+            <div style="background-image: url({{ asset('bundles/assets/images/bg-menu.jpg') }}"></div>
         </div>
 
         <div class="nk-header-table">
             <div class="nk-header-table-cell">
                 <div class="container">
                     <div class="nk-header-text">
-                        <h1 class="nk-title display-3">Vos produits</h1>
+                        <h1 class="nk-title display-3">Les produits</h1>
                         <div class="nk-gap-2"></div>
 
 
@@ -36,14 +39,16 @@
     {% endblock %}
 
     {% block Body %}
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
 <div class="nk-main">
     <div class="container">
         <div class="nk-gap-4"></div>
         <div class="nk-store-product">
             <div class="row xl-gap vertical-gap align-items-center">
+            {%  for produit in produit %}
                 <div class="col-md-5">
-                {%  for produit in produit %}
-                 {% set lien = app.request.getBaseURL() ~ '/uploads/Images/Stores/' ~ produit.image %}
+
+                 {% set lien = app.request.getBaseURL() ~ '/uploads/Images/Produits/' ~ produit.image %}
                     <!-- START: Product Photos Carousel -->
                     <div class="nk-carousel-3" data-size="1">
                         <div class="nk-carousel-inner nk-popup-gallery">
@@ -78,18 +83,59 @@
                 <div class="col-md-7">
                     <h2 class="nk-product-title">{{ produit.nom }}</h2>
                     <div class="nk-product-description">
-                        <p>{{ produit.description }}</p>
+                         <td> <strong>Description:  </strong><p>{{ produit.description }}</p></td>
                     </div>
 
 
-                    <form action="#" class="nk-form nk-product-addtocart">
-                        <button class="nk-btn nk-btn-x2 link-effect-4">Aimer</button> <span class="nk-product-price">{{ produit.prix }} <del>$145.00</del></span>
-                    </form>
+
+
+                    <td><strong>Prix:</strong> &nbsp;&nbsp;</td>
+
+                   <td> <span >{{ produit.prix }} Dt</span></td><div class="nk-gap-2"></div>
+
+ <td> <strong>Date d'ajout:  </strong> {{ produit.date |date('d/m/Y') }}</td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   <td><strong>Likes:</strong> &nbsp;&nbsp;</td>
+                  <td>
+                  <span id="like{{ produit.id }}"  class="nk-action-heart">
+                    <span class="num">{{ produit.likes }}</span>
+                    <span class="like-icon ion-android-favorite-outline"></span>
+                    <span class="liked-icon ion-android-favorite"></span>
+                   </span>
+                   </td>
+
+
+
+<script>$(document).ready(function () {
+                $('#like{{ produit.id }}').click(function () {
+                    var idp= {{ produit.id }};
+                    var like = {{ produit.likes }};
+
+                    var ajaxurl = 'show',
+                        data = { 'like': like , 'idp':idp };
+                    $.get(ajaxurl, data, function (response) {
+                        console.log(response)
+                        // Response div goes here.
+
+                    });
+                });
+            });</script>
+
+
                 </div>
+                 {% endfor %}
             </div>
-             {% endfor %}
+
             <div class="nk-gap-3"></div>
+
         </div>
     </div>
 </div>
+
+    <div class="nk-gap-2"></div>
+    <div class="nk-gap-2"></div>
+    <div class="nk-gap-2"></div>
+    <div class="nk-gap-2"></div>
+    <div class="nk-gap-2"></div>
+    <div class="nk-gap-2"></div>
     {% endblock %}

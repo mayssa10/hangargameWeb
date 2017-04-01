@@ -57,6 +57,20 @@ class Produit
      * @Assert\File(mimeTypes={ "image/jpeg","image/pjpeg","image/png" })
      */
     private $image;
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date", type="date", length=65535, nullable=false)
+     */
+    private $date;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="likes", type="integer",  nullable=true)
+     */
+    private $likes;
+
 
     /**
      * @return int
@@ -104,6 +118,38 @@ class Produit
     public function setDescription($description)
     {
         $this->description = $description;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * @param \DateTime $date
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+    }
+
+    /**
+     * @return int
+     */
+    public function getLikes()
+    {
+        return $this->likes;
+    }
+
+    /**
+     * @param int $likes
+     */
+    public function setLikes($likes)
+    {
+        $this->likes = $likes;
     }
 
     /**
