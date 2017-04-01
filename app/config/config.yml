@@ -92,3 +92,16 @@ fos_user:
             type: EntityBundle\Form\RegistrationType
             # if you are using Symfony < 2.8 you should use the type name instead
             # type: app_user_registration
+# Nomaya Configuration
+nomaya_social:
+    buttons:
+        facebook:
+            url:         "www.facebook.com"
+            locale:      "fr_FR"
+            send:        false
+            width:       300
+            showFaces:   false
+            layout:      "button_count"
+
+
+

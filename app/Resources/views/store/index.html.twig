@@ -1,7 +1,19 @@
-{% extends '@Entity/index2.html.twig' %}
-{% block titreImage %}
-    <div class="nk-main">
 
+
+        {% extends '@Entity/index2.html.twig' %}
+{% block titreImage %}
+<div class="nk-main">
+    <!-- START: Header Title --><!--
+            Additional Classes:
+                .nk-header-title-sm
+                .nk-header-title-md
+                .nk-header-title-lg
+                .nk-header-title-xl
+                .nk-header-title-full
+                .nk-header-title-parallax
+                .nk-header-title-parallax-opacity
+                .nk-header-title-boxed
+            -->
 
     <div class="nk-header-title nk-header-title-lg nk-header-title-parallax-opacity">
         <div class="bg-image">
@@ -12,7 +24,7 @@
             <div class="nk-header-table-cell">
                 <div class="container">
                     <div class="nk-header-text">
-                        <h1 class="nk-title display-3">Consulter nos stores ! :D</h1>
+                        <h1 class="nk-title display-3">Nos Store! </h1>
                         <div class="nk-gap-2"></div>
 
 
@@ -22,87 +34,40 @@
             </div>
         </div>
     </div>
-{% endblock %}
+    {% endblock %}
+
 
 {% block Body %}
-        <div id="nk-nav-mobile" class="nk-navbar nk-navbar-side nk-navbar-left-side nk-navbar-overlay-content hidden-lg-up">
-            <div class="nano">
-                <div class="nano-content">
-                    <a href="index-2.html" class="nk-nav-logo"><img src="assets/images/logo.png" alt="" width="90">
-                    </a>
-                    <div class="nk-navbar-mobile-content">
-                        <ul class="nk-nav">
-                            <!-- Here will be inserted menu from [data-mobile-menu="#nk-nav-mobile"] -->
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- END: Navbar Mobile -->
-        <div class="nk-main">
-            <div class="container">
-                <div class="nk-gap-4"></div>
-                <div class="nk-store">
-                    <!-- START: Products List -->
+<div class="nk-box">
+    <div class="nk-gap-4"></div>
 
-                    <div class="row no-gutters">
-                     {% for store in stores %}
+    <div class="container">
+
+        <div class="row vertical-gap lg-gap">
+        {% for store in stores %}
                        {% set lien = app.request.getBaseURL() ~ '/uploads/Images/Stores/' ~ store.image %}
-                        <div class="col-sm-6 col-lg-4">
-                            <!-- START: Product -->
+            <div class="col-md-6">
 
-                            <div class="nk-product" data-mouse-parallax-z="2">
-                                <div>
-                                    <div class="nk-carousel-3" data-size="1" data-mouse-parallax-z="3">
-                                        <div class="nk-carousel-inner nk-popup-gallery">
-                                            <div>
-                                                <div><img class="nk-img-stretch"   src="{{ lien }}" >
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <div><img class="nk-img-stretch"   src="{{ lien }}" >
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <div><img class="nk-img-stretch"   src="{{ lien }}" >
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <div><img class="nk-img-stretch"   src="{{ lien }}" >
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <h2 class="nk-product-title h5" data-mouse-parallax-z="1"><a href={{ path('produit_show',{'id':store.id}) }}>{{ store.nom }}</a></h2>
+                <blockquote class="nk-testimonial-2">
 
-                                    <div class="nk-product-bottom">
-                                        <div>
-                                            <div class="nk-product-price"> {{ store.country }}</div>
-                                            <div class="nk-product-price">{{ store.city }}</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- END: Product -->
+                    <div class="nk-testimonial-photo" style="background-image: url({{lien }}"></div>
+                    <div class="nk-testimonial-photo"></div>
+                    <div class="nk-testimonial-name h1"><em><a href={{ path('produit_show',{'id':store.id}) }}> {{ store.nom }}</a></em> </div>
+                    <div class="nk-testimonial-body">{{ store.description }}</div>
+                    <div class="nk-testimonial-source">Telephone: {{ user.tel}} </div>
+                    <div class="nk-testimonial-source">Adresse: {{ store.country }}, {{ store.city }} </div>
+{{ facebookButton()}}
+                </blockquote>
 
-                        </div>
- {% endfor %}
-
-
-
-                        </div>
-
-                    </div>
-                    <!-- END: Products List -->
-                    <div class="nk-gap-5"></div>
-                    <!-- START: Pagination -->
-                    <div class="nk-pagination nk-pagination-center">
-                        <nav><a href="#">1</a> <a href="#">2</a> <a class="nk-pagination-current-white" href="#">3</a> <a href="#">4</a> <span>...</span>
-                        </nav>
-                    </div>
-                    <!-- END: Pagination -->
-                </div>
-                <div class="nk-gap-4"></div>
-                <div class="nk-gap-3"></div>
             </div>
+
+  {% endfor %}
+        </div>
+
+
+    </div>
+
+    <div class="nk-gap-4"></div>
+    <div class="nk-gap-4"></div>
+</div>
 {% endblock %}

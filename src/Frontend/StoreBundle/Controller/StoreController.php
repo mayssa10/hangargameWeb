@@ -23,7 +23,7 @@ class StoreController extends Controller
         $stores = $em->getRepository('EntityBundle:Store')->findAll();
 
         return $this->render('store/index.html.twig', array(
-            'stores' => $stores,
+            'stores' => $stores,'user'=>$this->getUser(),
         ));
     }
 

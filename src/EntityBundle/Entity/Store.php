@@ -64,6 +64,28 @@ class Store
      * @Assert\File(mimeTypes={ "image/jpeg","image/pjpeg","image/png" })
      */
     private $image;
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="etat", type="integer",  nullable=true)
+     */
+    private $etat;
+
+    /**
+     * @return int
+     */
+    public function getEtat()
+    {
+        return $this->etat;
+    }
+
+    /**
+     * @param int $etat
+     */
+    public function setEtat($etat)
+    {
+        $this->etat = $etat;
+    }
 
     /**
      * @return string

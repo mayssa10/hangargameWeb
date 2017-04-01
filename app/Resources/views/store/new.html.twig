@@ -77,10 +77,12 @@
 
                             </tr>
                             {% for store in stores %}
+
                                 <tr>
+
                                     <td class="nk-product-cart-thumb">
                                         {% set lien = app.request.getBaseURL() ~ '/uploads/Images/Stores/' ~ store.image %}
-
+                                {% if(store.etat )==1 %}
                                         <a href="{{ path('produit_show',{'id':store.id}) }}" class="nk-post-image"><img
                                                     src="{{ lien }}"
                                                     class="nk-img">
@@ -114,6 +116,7 @@
                                     </td>
 
                                 </tr>
+                            {% endif %}
                             {% endfor %}
                             </tbody>
                         </table>
@@ -176,8 +179,11 @@
                     <input type="submit" value="Enregistrer" tabindex="4"
                            class="nk-btn nk-btn-color-main-1"/>
 
+
                 </div>
+
             </div>
+
             <!-- /.modal-content -->
         </div>
         <!-- /.modal-dialog -->

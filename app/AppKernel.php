@@ -25,6 +25,8 @@ class AppKernel extends Kernel
             new Frontend\EvenementBundle\FrontendEvenementBundle(),
             new Frontend\TournoiBundle\FrontendTournoiBundle(),
             new Backend\EvenementBundle\BackendEvenementBundle(),
+            new Nomaya\SocialBundle\NomayaSocialBundle(),
+
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

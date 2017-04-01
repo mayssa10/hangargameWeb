@@ -208,6 +208,13 @@ class ComposerStaticInit2554ac6f5d571f82debebd2d3d7133d2
                 0 => __DIR__ . '/..' . '/sensiolabs/security-checker',
             ),
         ),
+        'N' => 
+        array (
+            'Nomaya\\SocialBundle\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/nomaya/social-bundle',
+            ),
+        ),
         'D' => 
         array (
             'Doctrine\\ORM\\' => 
