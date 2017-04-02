@@ -22,7 +22,7 @@
             <div class="nk-header-table-cell">
                 <div class="container">
                     <div class="nk-header-text">
-                        <h1 class="nk-title display-3">Tournois ! </h1>
+                        <h1 class="nk-title display-3">Nos Tournoi ! </h1>
                         <div class="nk-gap-2"></div>
 
 
@@ -49,11 +49,11 @@
                     <div class="nk-testimonial-photo" style="background-image: url({{ asset('bundles/assets/images/avatar-2-sm.jpg') }}"></div>
                     <div class="nk-testimonial-photo"></div>
                     <div class="nk-testimonial-name h1"><em> {{ tournoi.nom  }}</em> </div>
-                    <div class="nk-testimonial-body">{{ tournoi.nomJeu }}</div>
-                    <div class="nk-testimonial-name h4">{{ tournoi.nbrMax }}</div>
-                    <div class="nk-testimonial-source">{{ tournoi.datedebut |date('Y/m/d') }}</div>
-                    <div class="nk-testimonial-source">{{ tournoi.datefin |date('Y/m/d') }}</div>
-                    <a href="#" class="nk-btn nk-btn-x2 nk-btn-block nk-btn-rounded nk-btn-color-main-1">Partciper</a>
+                    <div class="nk-testimonial-body h1">Nom Du Jeu : {{ tournoi.nomJeu }}</div>
+                    <div class="nk-testimonial-name">Nombre Max des Joeurs : {{ tournoi.nbrMax }}</div>
+                    <div class="nk-testimonial-source">Date Debut : {{ tournoi.datedebut |date('Y/m/d') }}</div>
+                    <div class="nk-testimonial-source">Date Fin : {{ tournoi.datefin |date('Y/m/d') }}</div>
+                    <a href="#" class="nk-btn nk-btn-x2 nk-btn-block nk-btn-rounded nk-btn-color-main-1">Je Participe</a>
                 </blockquote>
 
             </div>

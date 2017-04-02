@@ -1,9 +1,9 @@
-backend_evenement:
-    resource: "@BackendEvenementBundle/Resources/config/routing.yml"
-    prefix:   /
-
 frontend_tournoi:
     resource: "@FrontendTournoiBundle/Resources/config/routing.yml"
+    prefix:   /
+
+backend_evenement:
+    resource: "@BackendEvenementBundle/Resources/config/routing.yml"
     prefix:   /
 
 frontend_evenement:

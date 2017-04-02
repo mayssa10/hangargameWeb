@@ -4,7 +4,7 @@ tournoi_index:
     methods:  GET
 
 tournoi_show:
-    path:     /{id}/show
+    path:     /show
     defaults: { _controller: "FrontendTournoiBundle:Tournoi:show" }
     methods:  GET
 
@@ -21,4 +21,4 @@ tournoi_edit:
 tournoi_delete:
     path:     /{id}/delete
     defaults: { _controller: "FrontendTournoiBundle:Tournoi:delete" }
-    methods:  DELETE
+    methods:  [DELETE,GET]

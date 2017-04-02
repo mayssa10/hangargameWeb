@@ -4,6 +4,7 @@
 <body>
 
         <!-- page content -->
+
         <div class="right_col" role="main">
             <div class="">
                 <div class="page-title">
@@ -32,7 +33,7 @@
                                         <th>Adresse</th>
                                         <th>Date Debut</th>
                                         <th>Date Fin</th>
-                                        <th>Gestion</th>
+                                        <th>Actions</th>
 
                                     </tr>
                                     </thead>
@@ -49,6 +50,12 @@
                                         <td>{{ evenement.datefin |date('Y/m/d') }}</td>
                                         <td>
 
+
+                                           &nbsp;&nbsp; <a href="{{ path('evenement_delete',{'id':evenement.id}) }}"> <span
+                                                        class="fa fa-trash"></span></a>
+                                            &nbsp;&nbsp;
+                                            <a href="{{ path('evenement_edit',{'id':evenement.id}) }}"> <span
+                                                        class="fa fa-pencil-square-o" ></span></a>
                                         </td>
 
 
@@ -78,5 +85,7 @@
         <!-- /footer content -->
     </div>
 </div>
+
+
 </body>
 {% endblock %}

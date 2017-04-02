@@ -1,21 +1,79 @@
-{% extends 'base.html.twig' %}
 
-{% block body %}
-    <h1>Evenement edit</h1>
+{% extends '@Entity/indexBack.html.twig' %}
+{% block BodyBack %}
+    <!-- page content -->
+    <div class="right_col" role="main">
+        <div class="">
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>Modifier Evenement</h3>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="x_panel">
 
-    {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit" />
-    {{ form_end(edit_form) }}
+                        <div class="x_content">
+                            <br />
 
-    <ul>
-        <li>
-            <a href="{{ path('evenement_index') }}">Back to the list</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+                            {{ form_start(edit_form,{'attr':{'class':'form-horizontal form-label-left'}} ) }}
+
+
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Nom de l'evenement <span class="required">*</span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    {{ form_widget(edit_form.nom,{'attr':{'class':'form-control col-md-7 col-xs-12 required','placeholder':'Nom  *' | trans }}) }}
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Description <span class="required">*</span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    {{ form_widget(edit_form.description,{'attr':{'class':'form-control col-md-7 col-xs-12 required','placeholder':'Description  *' | trans }}) }}
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Adresse</label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    {{ form_widget(edit_form.adresse,{'attr':{'class':'form-control col-md-7 col-xs-12 required','placeholder':'Adresse *' | trans }}) }}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Date Debut</label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    {{ form_widget(edit_form.datedebut,{'attr':{'class':'form-control col-md-7 col-xs-12 required','placeholder':'Date Debut *' | trans }}) }}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Date Debut</label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    {{ form_widget(edit_form.datefin,{'attr':{'class':'form-control col-md-7 col-xs-12 required','placeholder':'Date Fin *' | trans }}) }}
+                                </div>
+                            </div>
+
+                            <div class="ln_solid"></div>
+                            <div class="form-group">
+                                <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                                    <button type="submit" class="btn btn-primary">Annuler</button>
+
+                                    <input type="submit" value="Modifier" tabindex="4"
+                                           class="btn btn-success"/>
+                                </div>
+                            </div>
+
+                            {{ form_end(edit_form) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    <!-- /page content -->
 {% endblock %}

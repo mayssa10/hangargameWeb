@@ -42,7 +42,7 @@ class TournoiController extends Controller
             $em->persist($tournoi);
             $em->flush();
 
-            return $this->redirectToRoute('tournoi_show', array('id' => $tournoi->getId()));
+            return $this->redirectToRoute('tournoi_show');
         }
 
         return $this->render('tournoi/new.html.twig', array(
@@ -55,14 +55,17 @@ class TournoiController extends Controller
      * Finds and displays a tournoi entity.
      *
      */
-    public function showAction(Tournoi $tournoi)
+    public function showAction()
     {
-        $deleteForm = $this->createDeleteForm($tournoi);
+        $em = $this->getDoctrine()->getManager();
 
+        $tournois = $em->getRepository('EntityBundle:Tournoi')->findAll();
         return $this->render('tournoi/show.html.twig', array(
-            'tournoi' => $tournoi,
-            'delete_form' => $deleteForm->createView(),
+            'tournois' => $tournois,
+
         ));
+
+
     }
 
     /**
@@ -92,18 +95,14 @@ class TournoiController extends Controller
      * Deletes a tournoi entity.
      *
      */
-    public function deleteAction(Request $request, Tournoi $tournoi)
+    public function deleteAction($id)
     {
-        $form = $this->createDeleteForm($tournoi);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->remove($tournoi);
-            $em->flush();
-        }
-
-        return $this->redirectToRoute('tournoi_index');
+        $em = $this->getDoctrine()->getManager();
+        $tournoi = $em->getRepository('EntityBundle:Tournoi')->find($id);
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($tournoi);
+        $em->flush();
+        return $this->redirectToRoute('tournoi_show');
     }
 
     /**
