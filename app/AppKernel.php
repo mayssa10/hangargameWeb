@@ -26,6 +26,7 @@ class AppKernel extends Kernel
             new Frontend\TournoiBundle\FrontendTournoiBundle(),
             new Backend\EvenementBundle\BackendEvenementBundle(),
             new Nomaya\SocialBundle\NomayaSocialBundle(),
+            new Vich\UploaderBundle\VichUploaderBundle(),
 
         ];
 

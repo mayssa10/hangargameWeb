@@ -15,8 +15,7 @@ imports:
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: fr
-    stores_directory: '%kernel.root_dir%/../web/uploads/Images/Stores'
-    product_directory: '%kernel.root_dir%/../web/uploads/Images/Produits'
+
 
 framework:
     #esi:             ~
@@ -102,6 +101,16 @@ nomaya_social:
             width:       300
             showFaces:   false
             layout:      "button_count"
+vich_uploader:
+    db_driver: orm
+    mappings:
+           product_image:
+                       uri_prefix:         /uploads/Images/Stores
+                       upload_destination: '%kernel.root_dir%/../web/uploads/Images/Stores'
+                       namer:  vich_uploader.namer_hash
+                       inject_on_load:     true
+                       delete_on_update:   true
+                       delete_on_remove:   true
 
 
 

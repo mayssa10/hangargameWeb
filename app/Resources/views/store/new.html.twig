@@ -81,10 +81,12 @@
                                 <tr>
 
                                     <td class="nk-product-cart-thumb">
-                                        {% set lien = app.request.getBaseURL() ~ '/uploads/Images/Stores/' ~ store.image %}
+
                                 {% if(store.etat )==1 %}
                                         <a href="{{ path('produit_show',{'id':store.id}) }}" class="nk-post-image"><img
-                                                    src="{{ lien }}"
+                                                    name="{{ store.id }}"
+                                                    src="{{ asset('/uploads/Images/Stores/' ~ store.imageName) }}"
+
                                                     class="nk-img">
                                         </a>
                                     </td>
@@ -167,7 +169,7 @@
 
                         </div>
                         <div class="col-sm-6">
-                            {{ form_widget(form.image,{'attr':{'class':'form-control required','placeholder':'image*' | trans }}) }}
+                            {{ form_row(form.imageFile,{'attr':{'class':'form-control required','placeholder':'image*' | trans }}) }}
 
                         </div>
                     </div>
