@@ -36,8 +36,7 @@ class TournoiController extends Controller
         $tournoi = new Tournoi();
         $form = $this->createForm('EntityBundle\Form\TournoiType', $tournoi);
         $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
+        if (($form->isSubmitted()) && ($form->isValid()) && ($tournoi->getDatedebut()<$tournoi->getDatefin()) && ($tournoi->getNbrMax()>0)) {
             $em = $this->getDoctrine()->getManager();
             $em->persist($tournoi);
             $em->flush();

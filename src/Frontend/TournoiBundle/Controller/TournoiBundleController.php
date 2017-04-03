@@ -76,7 +76,7 @@ class TournoiController extends Controller
         $editForm = $this->createForm('EntityBundle\Form\TournoiType', $tournoi);
         $editForm->handleRequest($request);
 
-        if ($editForm->isSubmitted() && $editForm->isValid()) {
+        if ($editForm->isSubmitted() && $editForm->isValid() && ($tournoi->getDatedebut()<$tournoi->getDatefin())) {
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('tournoi_edit', array('id' => $tournoi->getId()));

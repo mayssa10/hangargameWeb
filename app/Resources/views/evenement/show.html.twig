@@ -1,6 +1,16 @@
 {% extends '@Entity/indexBack.html.twig' %}
 {% block BodyBack %}
+    <!DOCTYPE html>
 
+    <head>
+
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <style type="text/css">
+            #map-canvas { width: 730px; height: 500px; margin: 0 auto;  }
+
+        </style>
+
+    </head>
 <body>
 
         <!-- page content -->
@@ -63,21 +73,30 @@
                                     {% endfor %}
                                     </tbody>
                                 </table>
-
                             </div>
+
                         </div>
+                        <div id="map-canvas"/>
+                        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5v94FfbGgY5zJe4CBLkb7-yVmJk87OrA&libraries=places&callback=initAutocomplete"
+                                async defer></script>
+                        <script type="text/javascript">
+
+                            function initialize() {
+                                var mapOptions = {
+                                    center: new google.maps.LatLng(45.75, 4.85),
+                                    zoom: 13,
+                                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                                };
+                                var map = new google.maps.Map(document.getElementById("map-canvas"),
+                                    mapOptions);
+                            }
+                            google.maps.event.addDomListener(window, 'load', initialize);
+                        </script>
                     </div>
-
-
-
-
-
-
-
-
                 </div>
             </div>
         </div>
+
         <!-- /page content -->
 
         <!-- footer content -->
@@ -88,4 +107,5 @@
 
 
 </body>
+    </html>
 {% endblock %}
