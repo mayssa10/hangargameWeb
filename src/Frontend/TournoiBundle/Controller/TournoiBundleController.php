@@ -28,7 +28,7 @@ class TournoiController extends Controller
     }
 
     /**
-     * Creates a new evenement entity.
+     * Creates a new tournoi entity.
      *
      */
     public function newAction(Request $request)
@@ -55,24 +55,25 @@ class TournoiController extends Controller
      * Finds and displays a tournoi entity.
      *
      */
-    public function showAction(Tournoi $tournoi)
+    public function showAction()
     {
-        $deleteForm = $this->createDeleteForm($tournoi);
+        $em = $this->getDoctrine()->getManager();
 
+        $tournois = $em->getRepository('EntityBundle:Tournoi')->findAll();
         return $this->render('tournoi/show.html.twig', array(
-            'tournoi' => $tournoi,
-            'delete_form' => $deleteForm->createView(),
+            'tournois' => $tournois,
+
         ));
     }
 
     /**
-     * Displays a form to edit an existing evenement entity.
+     * Displays a form to edit an existing tournoi entity.
      *
      */
     public function editAction(Request $request, Tournoi $tournoi)
     {
         $deleteForm = $this->createDeleteForm($tournoi);
-        $editForm = $this->createForm('Frontend\TournoiBundle\Form\TournoiType', $tournoi);
+        $editForm = $this->createForm('EntityBundle\Form\TournoiType', $tournoi);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
@@ -103,13 +104,13 @@ class TournoiController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('evenement_index');
+        return $this->redirectToRoute('tournoi_index');
     }
 
     /**
-     * Creates a form to delete a evenement entity.
+     * Creates a form to delete a tournoi entity.
      *
-     * @param Tournoi $tournoi The evenement entity
+     * @param Tournoi $tournoi The tournoi entity
      *
      * @return \Symfony\Component\Form\Form The form
      */

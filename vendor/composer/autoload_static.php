@@ -18,6 +18,15 @@ class ComposerStaticInit2554ac6f5d571f82debebd2d3d7133d2
     );
 
     public static $prefixLengthsPsr4 = array (
+        'Z' => 
+        array (
+            'Zend\\EventManager\\' => 18,
+            'Zend\\Code\\' => 10,
+        ),
+        'V' => 
+        array (
+            'Vich\\UploaderBundle\\' => 20,
+        ),
         'T' => 
         array (
             'Tests\\' => 6,
@@ -75,6 +84,18 @@ class ComposerStaticInit2554ac6f5d571f82debebd2d3d7133d2
     );
 
     public static $prefixDirsPsr4 = array (
+        'Zend\\EventManager\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-eventmanager/src',
+        ),
+        'Zend\\Code\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-code/src',
+        ),
+        'Vich\\UploaderBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/vich/uploader-bundle',
+        ),
         'Tests\\' => 
         array (
             0 => __DIR__ . '/../..' . '/tests',
@@ -216,6 +237,13 @@ class ComposerStaticInit2554ac6f5d571f82debebd2d3d7133d2
                 0 => __DIR__ . '/..' . '/sensiolabs/security-checker',
             ),
         ),
+        'P' => 
+        array (
+            'ProxyManager\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/ocramius/proxy-manager/src',
+            ),
+        ),
         'N' => 
         array (
             'Nomaya\\SocialBundle\\' => 
@@ -223,11 +251,19 @@ class ComposerStaticInit2554ac6f5d571f82debebd2d3d7133d2
                 0 => __DIR__ . '/..' . '/nomaya/social-bundle',
             ),
         ),
+<<<<<<< HEAD
         'K' => 
         array (
             'Knp\\Component' => 
             array (
                 0 => __DIR__ . '/..' . '/knplabs/knp-components/src',
+=======
+        'M' => 
+        array (
+            'Metadata\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/jms/metadata/src',
+>>>>>>> f8ec01f785fc4ab66ec77d7cea01be1696731d83
             ),
         ),
         'D' => 

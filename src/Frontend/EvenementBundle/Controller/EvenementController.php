@@ -60,9 +60,9 @@ class EvenementController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $evenements = $em->getRepository('EntityBundle:Evenement')->findAll();
-
         return $this->render('evenement/show.html.twig', array(
             'evenements' => $evenements,
+
         ));
     }
 
@@ -79,7 +79,7 @@ class EvenementController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('evenement_edit', array('id' => $evenement->getId()));
+            return $this->redirectToRoute('evenement_show', array('id' => $evenement->getId()));
         }
 
         return $this->render('evenement/edit.html.twig', array(
@@ -87,24 +87,22 @@ class EvenementController extends Controller
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));
+
     }
 
     /**
      * Deletes a evenement entity.
      *
      */
-    public function deleteAction(Request $request, Evenement $evenement)
+    public function deleteAction($id)
     {
-        $form = $this->createDeleteForm($evenement);
-        $form->handleRequest($request);
+        $em = $this->getDoctrine()->getManager();
+        $evenement = $em->getRepository('EntityBundle:Evenement')->find($id);
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($evenement);
+        $em->flush();
+        return $this->redirectToRoute('evenement_show');
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->remove($evenement);
-            $em->flush();
-        }
-
-        return $this->redirectToRoute('evenement_index');
     }
 
     /**
@@ -122,4 +120,5 @@ class EvenementController extends Controller
             ->getForm()
             ;
     }
+
 }

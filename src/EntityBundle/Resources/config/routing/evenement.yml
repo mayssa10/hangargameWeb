@@ -21,4 +21,4 @@ evenement_edit:
 evenement_delete:
     path:     /{id}/delete
     defaults: { _controller: "FrontendEvenementBundle:Evenement:delete" }
-    methods:  DELETE
+    methods:  [DELETE, GET]

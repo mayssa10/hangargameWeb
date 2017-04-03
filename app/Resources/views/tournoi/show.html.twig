@@ -1,48 +1,53 @@
-{% extends 'base.html.twig' %}
+{% extends '@Entity/indexBack.html.twig' %}
+{% block BodyBack %}
 
-{% block body %}
-    <h1>Tournoi</h1>
+    <div class="col-md-12 col-sm-12 col-xs-12, center-margin ">
+    <div class="x_panel">
+        <div class="x_title">
+            <h2>Tournois</h2>
+            <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
 
-    <table>
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ tournoi.id }}</td>
-            </tr>
-            <tr>
-                <th>Nom</th>
-                <td>{{ tournoi.nom }}</td>
-            </tr>
-            <tr>
-                <th>Nomjeu</th>
-                <td>{{ tournoi.nomJeu }}</td>
-            </tr>
-            <tr>
-                <th>Nbrmax</th>
-                <td>{{ tournoi.nbrMax }}</td>
-            </tr>
-            <tr>
-                <th>Datedebut</th>
-                <td>{% if tournoi.datedebut %}{{ tournoi.datedebut|date('Y-m-d') }}{% endif %}</td>
-            </tr>
-            <tr>
-                <th>Datefin</th>
-                <td>{% if tournoi.datefin %}{{ tournoi.datefin|date('Y-m-d') }}{% endif %}</td>
-            </tr>
-        </tbody>
-    </table>
+            <table class="table table-bordered" >
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nom Tournoi</th>
+                    <th>Nom Jeu</th>
+                    <th>Nombre Max</th>
+                    <th>Date Debut</th>
+                    <th>Date Fin</th>
+                    <td align="center"><i class="fa fa-arrow-down"></i></td>
 
-    <ul>
-        <li>
-            <a href="{{ path('tournoi_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('tournoi_edit', { 'id': tournoi.id }) }}">Edit</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+                </tr>
+                </thead>
+                <tbody>
+                {% for tournoi in tournois %}
+                <tr>
+
+                    <td>{{ tournoi.id }}</td>
+                    <td>{{ tournoi.nom }}</td>
+                    <td>{{ tournoi.nomJeu }}</td>
+                    <td>{{ tournoi.nbrMax }}</td>
+                    <td>{{ tournoi.datedebut|date('Y/m/d') }}</td>
+                    <td>{{ tournoi.datefin|date('Y/m/d') }}</td>
+
+                    <td align="center">
+                        <a href="{{ path('tournoi_delete',{'id':tournoi.id}) }}"> <span
+                                    class="fa fa-trash"></span></a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="{{ path('tournoi_edit',{'id':tournoi.id}) }}"> <span
+                                    class="fa fa-pencil-square-o" ></span></a></td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+
+
+
 {% endblock %}

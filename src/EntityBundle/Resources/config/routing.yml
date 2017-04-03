@@ -2,6 +2,10 @@ entity_evenement:
     resource: "@EntityBundle/Resources/config/routing/evenement.yml"
     prefix:   /evenement
 
+entity_tournoi:
+    resource: "@EntityBundle/Resources/config/routing/tournoi.yml"
+    prefix:   /tournoi
+
 entity_produit:
     resource: "@FrontendProduitBundle/Resources/config/routing/produit.yml"
     prefix:   /produit

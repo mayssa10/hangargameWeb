@@ -23,11 +23,15 @@ class AppKernel extends Kernel
             new Backend\ActualiteBundle\BackendActualiteBundle(),
             new Frontend\ProduitBundle\FrontendProduitBundle(),
             new Frontend\EvenementBundle\FrontendEvenementBundle(),
-            new Frontend\TournoiBundle\FrontendTournoiBundle(),
             new Backend\EvenementBundle\BackendEvenementBundle(),
             new Nomaya\SocialBundle\NomayaSocialBundle(),
+<<<<<<< HEAD
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             new Backend\ConsoleBundle\BackendConsoleBundle(),
+=======
+            new Vich\UploaderBundle\VichUploaderBundle(),
+            new Frontend\TournoiBundle\FrontendTournoiBundle(),
+>>>>>>> f8ec01f785fc4ab66ec77d7cea01be1696731d83
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

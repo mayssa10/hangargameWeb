@@ -8,8 +8,13 @@ $baseDir = dirname($vendorDir);
 return array(
     'Twig_' => array($vendorDir . '/twig/twig/lib'),
     'SensioLabs\\Security' => array($vendorDir . '/sensiolabs/security-checker'),
+    'ProxyManager\\' => array($vendorDir . '/ocramius/proxy-manager/src'),
     'Nomaya\\SocialBundle\\' => array($vendorDir . '/nomaya/social-bundle'),
+<<<<<<< HEAD
     'Knp\\Component' => array($vendorDir . '/knplabs/knp-components/src'),
+=======
+    'Metadata\\' => array($vendorDir . '/jms/metadata/src'),
+>>>>>>> f8ec01f785fc4ab66ec77d7cea01be1696731d83
     'Doctrine\\ORM\\' => array($vendorDir . '/doctrine/orm/lib'),
     'Doctrine\\DBAL\\' => array($vendorDir . '/doctrine/dbal/lib'),
     'Doctrine\\Common\\Lexer\\' => array($vendorDir . '/doctrine/lexer/lib'),

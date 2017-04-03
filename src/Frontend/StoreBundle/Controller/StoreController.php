@@ -41,16 +41,8 @@ class StoreController extends Controller
         $stores = $em->getRepository('EntityBundle:Store')->findBy(array('user'=>$this->getUser()));
         $nb = count($stores);
         if ($form->isSubmitted() && $form->isValid()) {
-            $file = $store->getImage();
 
-            // Generate a unique name for the file before saving it
-            $fileName = md5(uniqid()) . '.' . $file->guessExtension();
-
-            // Move the file to the directory where brochures are stored
-            $file->move(
-                $this->getParameter('stores_directory'), $fileName
-            );
-            $store->setImage($fileName);
+            $store->setUpdatedAt(new \DateTime('now'));
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($store);

@@ -31,7 +31,11 @@
         "twig/twig": "^1.0||^2.0",
         "friendsofsymfony/user-bundle": "~2.0@dev",
         "nomaya/social-bundle": "dev-master",
+<<<<<<< HEAD
         "knplabs/knp-paginator-bundle": "^2.5"
+=======
+        "vich/uploader-bundle": "1.4.0"
+>>>>>>> f8ec01f785fc4ab66ec77d7cea01be1696731d83
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",

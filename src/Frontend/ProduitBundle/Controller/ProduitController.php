@@ -37,6 +37,7 @@ class ProduitController extends Controller
         $produit = new Produit();
         $form = $this->createForm('Frontend\ProduitBundle\Form\ProduitType', $produit);
         $form->handleRequest($request);
+
         $id= $request->get('id');
         $produit->setStore($id);
         $now=new DateTime();
@@ -44,16 +45,8 @@ class ProduitController extends Controller
    $produit->setDate($now);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $file = $produit->getImage();
 
-            // Generate a unique name for the file before saving it
-            $fileName = md5(uniqid()) . '.' . $file->guessExtension();
-
-            // Move the file to the directory where brochures are stored
-            $file->move(
-                $this->getParameter('product_directory'), $fileName
-            );
-            $produit->setImage($fileName);
+            $produit->setUpdatedAt(new \DateTime('now'));
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($produit);
