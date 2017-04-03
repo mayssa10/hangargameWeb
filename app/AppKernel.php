@@ -26,7 +26,8 @@ class AppKernel extends Kernel
             new Frontend\TournoiBundle\FrontendTournoiBundle(),
             new Backend\EvenementBundle\BackendEvenementBundle(),
             new Nomaya\SocialBundle\NomayaSocialBundle(),
-
+            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
+            new Backend\ConsoleBundle\BackendConsoleBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
@@ -58,4 +59,5 @@ class AppKernel extends Kernel
     {
         $loader->load($this->getRootDir().'/config/config_'.$this->getEnvironment().'.yml');
     }
+
 }

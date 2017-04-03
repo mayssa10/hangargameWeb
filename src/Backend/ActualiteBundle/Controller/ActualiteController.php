@@ -38,11 +38,26 @@ class ActualiteController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            $file = $actualite->getImage();
+
+            // Generate a unique name for the file before saving it
+            $fileName = md5(uniqid()) . '.' . $file->guessExtension();
+
+            // Move the file to the directory where brochures are stored
+            $file->move(
+                $this->getParameter('actualite_directory'), $fileName
+            );
+            $actualite->setImage($fileName);
+
+
+
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($actualite);
             $em->flush();
 
-            return $this->redirectToRoute('actualite_show', array('id' => $actualite->getId()));
+            return $this->redirectToRoute('actualite_index', array('id' => $actualite->getId()));
         }
 
         return $this->render('actualite/new.html.twig', array(
@@ -55,13 +70,22 @@ class ActualiteController extends Controller
      * Finds and displays a actualite entity.
      *
      */
-    public function showAction(Actualite $actualite)
+    public function showAction(Request $request )
     {
-        $deleteForm = $this->createDeleteForm($actualite);
 
-        return $this->render('actualite/show.html.twig', array(
-            'actualite' => $actualite,
-            'delete_form' => $deleteForm->createView(),
+        $em  = $this->getDoctrine()->getManager();
+        $dql   = "SELECT a FROM EntityBundle:Actualite a";
+        $query = $em->createQuery($dql);
+
+        $paginator  = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $query, /* query NOT result */
+            $request->query->getInt('page', 1)/*page number*/,
+            3/*limit per page*/
+        );
+        return $this->render('actualite/index.html.twig', array(
+            'pagination' => $pagination,
+
         ));
     }
 
@@ -69,16 +93,26 @@ class ActualiteController extends Controller
      * Displays a form to edit an existing actualite entity.
      *
      */
-    public function editAction(Request $request, Actualite $actualite)
+    public function editAction(Actualite $actualite ,Request $request )
     {
         $deleteForm = $this->createDeleteForm($actualite);
         $editForm = $this->createForm('Backend\ActualiteBundle\Form\ActualiteType', $actualite);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
+            $file = $actualite->getImage();
+
+            // Generate a unique name for the file before saving it
+            $fileName = md5(uniqid()) . '.' . $file->guessExtension();
+
+            // Move the file to the directory where brochures are stored
+            $file->move(
+                $this->getParameter('actualite_directory'), $fileName
+            );
+            $actualite->setImage($fileName);
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('actualite_edit', array('id' => $actualite->getId()));
+            return $this->redirectToRoute('actualite_index', array());
         }
 
         return $this->render('actualite/edit.html.twig', array(
@@ -92,19 +126,17 @@ class ActualiteController extends Controller
      * Deletes a actualite entity.
      *
      */
-    public function deleteAction(Request $request, Actualite $actualite)
+    public function deleteAction($id)
     {
-        $form = $this->createDeleteForm($actualite);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->remove($actualite);
-            $em->flush();
-        }
-
+        $em = $this->getDoctrine()->getManager();
+        $actualite = $em->getRepository('EntityBundle:Actualite')->find($id);
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($actualite);
+        $em->flush();
         return $this->redirectToRoute('actualite_index');
     }
+
+
 
     /**
      * Creates a form to delete a actualite entity.

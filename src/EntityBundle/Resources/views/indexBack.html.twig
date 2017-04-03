@@ -42,7 +42,7 @@
                 <!-- menu profile quick info -->
                 <div class="profile clearfix">
                     <div class="profile_pic">
-                        <img src="{{('bundlesBack/images/img.jpg')}}" alt="..." class="img-circle profile_img">
+                        <img src="{{asset('bundlesBack/images/img.jpg')}}" alt="..." class="img-circle profile_img">
                     </div>
                     <div class="profile_info">
                         <span>Bonjour,</span>
@@ -104,12 +104,10 @@
                             </li>
                             <li><a><i class="fa fa-edit"></i> Gestion d'actualité <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="form.html">General Form</a></li>
-                                    <li><a href="form_advanced.html">Advanced Components</a></li>
-                                    <li><a href="form_validation.html">Form Validation</a></li>
-                                    <li><a href="form_wizards.html">Form Wizard</a></li>
-                                    <li><a href="form_upload.html">Form Upload</a></li>
-                                    <li><a href="form_buttons.html">Form Buttons</a></li>
+                                    <li><a href=" {{ path('actualite_index') }}">Liste Des Actualités</a></li>
+                                    <li><a href=" {{ path('actualite_new') }}">Ajout Actualité</a></li>
+
+
                                 </ul>
                             </li>
                             <li><a><i class="fa fa-edit"></i> Gestion de jeux-video <span class="fa fa-chevron-down"></span></a>
@@ -124,12 +122,8 @@
                             </li>
                             <li><a><i class="fa fa-edit"></i> Gestion de console <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="form.html">General Form</a></li>
-                                    <li><a href="form_advanced.html">Advanced Components</a></li>
-                                    <li><a href="form_validation.html">Form Validation</a></li>
-                                    <li><a href="form_wizards.html">Form Wizard</a></li>
-                                    <li><a href="form_upload.html">Form Upload</a></li>
-                                    <li><a href="form_buttons.html">Form Buttons</a></li>
+                                    <li><a href="{{ path('console_index') }}">Liste des Consoles</a></li>
+                                    <li><a href="{{ path('console_new') }}">Ajouter console</a></li>
                                 </ul>
                             </li>
                             <li><a><i class="fa fa-edit"></i> Gestion de Forum <span class="fa fa-chevron-down"></span></a>
@@ -265,7 +259,7 @@
                             <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
                                 <li>
                                     <a>
-                                        <span class="image"><img src="{{ ('bundlesBack/images/img.jpg')}}" alt="Profile Image" /></span>
+                                        <span class="image"><img src="{{ asset('bundlesBack/images/img.jpg')}}" alt="Profile Image" /></span>
                                         <span>
                           <span>John Smith</span>
                           <span class="time">3 mins ago</span>
@@ -277,7 +271,7 @@
                                 </li>
                                 <li>
                                     <a>
-                                        <span class="image"><img src="{{('bundlesBack/images/img.jpg') }}" alt="Profile Image" /></span>
+                                        <span class="image"><img src="{{ asset('bundlesBack/images/img.jpg') }}" alt="Profile Image" /></span>
                                         <span>
                           <span>John Smith</span>
                           <span class="time">3 mins ago</span>
@@ -289,7 +283,7 @@
                                 </li>
                                 <li>
                                     <a>
-                                        <span class="image"><img src="{{('bundlesBack/images/img.jpg') }}" alt="Profile Image" /></span>
+                                        <span class="image"><img src="{{ asset('bundlesBack/images/img.jpg') }}" alt="Profile Image" /></span>
                                         <span>
                           <span>John Smith</span>
                           <span class="time">3 mins ago</span>
@@ -301,7 +295,7 @@
                                 </li>
                                 <li>
                                     <a>
-                                        <span class="image"><img src="{{('bundlesBack/images/img.jpg') }}" alt="Profile Image" /></span>
+                                        <span class="image"><img src="{{ asset('bundlesBack/images/img.jpg') }}" alt="Profile Image" /></span>
                                         <span>
                           <span>John Smith</span>
                           <span class="time">3 mins ago</span>

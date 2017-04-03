@@ -10,6 +10,7 @@ imports:
     - { resource: "@FrontendEvenementBundle/Resources/config/services.yml" }
     - { resource: "@FrontendTournoiBundle/Resources/config/services.yml" }
     - { resource: "@BackendEvenementBundle/Resources/config/services.yml" }
+    - { resource: "@BackendConsoleBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
@@ -17,6 +18,8 @@ parameters:
     locale: fr
     stores_directory: '%kernel.root_dir%/../web/uploads/Images/Stores'
     product_directory: '%kernel.root_dir%/../web/uploads/Images/Produits'
+    actualite_directory: '%kernel.root_dir%/../web/uploads/Images/Actualites'
+    console_directory: '%kernel.root_dir%/../web/uploads/Images/Actualites'
 
 framework:
     #esi:             ~
@@ -102,6 +105,16 @@ nomaya_social:
             width:       300
             showFaces:   false
             layout:      "button_count"
+knp_paginator:
+    page_range: 5                      # default page range used in pagination control
+    default_options:
+        page_name: page                # page query parameter name
+        sort_field_name: sort          # sort field query parameter name
+        sort_direction_name: direction # sort direction query parameter name
+        distinct: true                 # ensure distinct results, useful when ORM queries are using GROUP BY statements
+    template:
+        pagination: 'KnpPaginatorBundle:Pagination:twitter_bootstrap_v3_pagination.html.twig'     # sliding pagination controls template
+        sortable: 'KnpPaginatorBundle:Pagination:sortable_link.html.twig' # sort link template
 
 
 

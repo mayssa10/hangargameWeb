@@ -1,0 +1,24 @@
+console_index:
+    path:     /
+    defaults: { _controller: "EntityBundle:Console:index" }
+    methods:  GET
+
+console_show:
+    path:     /{id}/show
+    defaults: { _controller: "EntityBundle:Console:show" }
+    methods:  GET
+
+console_new:
+    path:     /new
+    defaults: { _controller: "EntityBundle:Console:new" }
+    methods:  [GET, POST]
+
+console_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "EntityBundle:Console:edit" }
+    methods:  [GET, POST]
+
+console_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "EntityBundle:Console:delete" }
+    methods:  [DELETE,GET]

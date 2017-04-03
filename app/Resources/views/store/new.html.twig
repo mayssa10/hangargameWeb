@@ -81,7 +81,7 @@
                                 <tr>
 
                                     <td class="nk-product-cart-thumb">
-                                        {% set lien = app.request.getBaseURL() ~ '/uploads/Images/Stores/' ~ store.image %}
+                                        {% set lien = app.request.getBaseURL() ~ '/uploads/Images/Actualites/' ~ store.image %}
                                 {% if(store.etat )==1 %}
                                         <a href="{{ path('produit_show',{'id':store.id}) }}" class="nk-post-image"><img
                                                     src="{{ lien }}"

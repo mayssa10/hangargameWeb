@@ -13,7 +13,9 @@ entity_actualite:
 entity_store:
     resource: "@FrontendStoreBundle/Resources/config/routing/store.yml"
     prefix:   /store
-
+entity_console:
+    resource: "@BackendConsoleBundle/Resources/config/routing/console.yml"
+    prefix:   /console
 entity_homepage:
     path:     /
     defaults: { _controller: EntityBundle:Default:index }

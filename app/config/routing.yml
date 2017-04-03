@@ -1,3 +1,7 @@
+backend_console:
+    resource: "@BackendConsoleBundle/Resources/config/routing.yml"
+    prefix:   /
+
 backend_evenement:
     resource: "@BackendEvenementBundle/Resources/config/routing.yml"
     prefix:   /

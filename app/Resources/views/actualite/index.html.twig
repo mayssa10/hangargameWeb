@@ -1,21 +1,95 @@
-{% extends '@Entity/index2.html.twig' %}
+{% extends is_granted('ROLE_ADMIN') ? "@Entity/indexBack.html.twig" : "@Entity/index2.html.twig" %}
+
 
 
 {% block Body %}
+    {{ knp_pagination_render(pagination) }}
     <div class="nk-popup-gallery nk-popup-gallery-2-col nk-isotope" data-pswp-uid="1"
          style="position: relative; height: 1709.4px;">
 
-    {% for actualite in actualites %}
-        <div class="nk-gallery-item-box nk-isotope-item parallaxed col-3" data-mouse-parallax-z="5"
-             data-mouse-parallax-speed="1"
-             style="position: absolute; left: 0px; top: 0px; transform: translate3d(-4.86364px, -18.0659px, 0px);"><a
-                    href='{{asset('uploads/Images/Actualite/'~actualite.image)}}' class="nk-gallery-item " data-size="1920x1640"><img
-                        src='{{asset('uploads/Images/Actualite/'~actualite.image)}}'  alt="" ><h4>{{ actualite.titre }}</h4></a>
-            <div class="photoswipe-description">
-                <h4>{{ actualite.titre }}</h4>
-                {{ actualite.text }}
+        {% for actualite in pagination %}
+            {% set lien = app.request.getBaseURL() ~ '/uploads/Images/Actualites/' ~ actualite.image %}
+            <div class="nk-gallery-item-box nk-isotope-item parallaxed col-4" data-mouse-parallax-z="5"
+                 data-mouse-parallax-speed="1"
+                 style="position: absolute; left: 0px; top: 0px; transform: translate3d(-4.86364px, -18.0659px, 0px);"><a
+                        href='{{lien}}' class="nk-gallery-item " data-size="1920x1640"><img
+                            src='{{lien}}'  alt="" ><h4>{{ actualite.titre }}</h4></a>
+                <div class="photoswipe-description">
+                    <h4>{{ actualite.titre }}</h4>
+                    {{ actualite.text }}
+                </div>
             </div>
-        </div>
-    {% endfor %}
+        {% endfor %}
     </div>
+{% endblock %}
+
+{% block BodyBack %}
+<div class="row">
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Liste des actualités<small>Admin</small></h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix" ></div>
+            </div>
+            <div class="navigation">
+                {{ knp_pagination_render(pagination) }}
+            </div>
+            <div class="x_content">
+
+                <table id="datatable" class="table table-striped table-bordered">
+
+                    <thead>
+                    <tr>
+                        <th>Titre</th>
+                        <th>Description</th>
+                        <th>Image</th>
+                        <th>Supp/Modif</th>
+
+
+
+                    </tr>
+                    </thead>
+
+
+                    <tbody>
+                    {% for actualite in pagination %}
+                        {% set lien = app.request.getBaseURL() ~ '/uploads/Images/Actualites/' ~ actualite.image %}
+                    <tr>
+                        <td>{{actualite.titre }}</td>
+                        <td>{{ actualite.text }}</td>
+                        <td>
+                            <div class="product_gallery">
+                             <a href='{{lien}}'>
+                                    <img   src="{{ lien }}" >
+                             </a>
+                            </div>
+                        </td>
+
+                        <td><a href='{{ path('actualite_delete',{'id': actualite.id}) }}' ><i class="fa fa-trash-o"></i></a>
+                            &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+
+                        <a href='{{ path('actualite_edit',{'id': actualite.id}) }}'><i class="fa fa-pencil"></i></a></td>
+
+
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+</div>
 {% endblock %}
