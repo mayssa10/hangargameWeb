@@ -7,6 +7,8 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TimeType;
 use Vich\UploaderBundle\Form\Type\VichFileType;
+
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 class ProduitType extends AbstractType
 
 {
@@ -15,7 +17,8 @@ class ProduitType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('nom')->add('description')->add('prix')->add('imageFile',VichFileType::class);
+        $builder->add('nom')->add('description')->add('prix')->add('imageFile',VichFileType::class)
+            ;
 
 
     }

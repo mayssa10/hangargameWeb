@@ -21,3 +21,4 @@ store_edit:
 store_delete:
     path:     /{id}/delete
     defaults: { _controller: "FrontendStoreBundle:Store:delete" }
+    methods: [DELETE,GET]

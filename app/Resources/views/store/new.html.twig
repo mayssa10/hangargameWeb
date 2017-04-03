@@ -23,7 +23,7 @@
             <div class="nk-header-table-cell">
                 <div class="container">
                     <div class="nk-header-text">
-                        <h1 class="nk-title display-3">Créer votre propre store</h1>
+                        <h1 class="nk-title display-3">{{ app.user.username }}, Créer votre store!  </h1>
                         <div class="nk-gap-2"></div>
 
 
@@ -80,9 +80,11 @@
 
                                 <tr>
 
-                                    <td class="nk-product-cart-thumb">
+
 
                                 {% if(store.etat )==1 %}
+
+                                    <td class="nk-product-cart-thumb">
                                         <a href="{{ path('produit_show',{'id':store.id}) }}" class="nk-post-image"><img
                                                     name="{{ store.id }}"
                                                     src="{{ asset('/uploads/Images/Stores/' ~ store.imageName) }}"

@@ -36,10 +36,12 @@ class StoreController extends Controller
         $store = new Store();
         $form = $this->createForm('Frontend\StoreBundle\Form\StoreType', $store);
         $form->handleRequest($request);
+
         $store->setUser($this->getUser());
         $em = $this->getDoctrine()->getManager();
         $stores = $em->getRepository('EntityBundle:Store')->findBy(array('user'=>$this->getUser()));
         $nb = count($stores);
+        $store->setEtat(0);
         if ($form->isSubmitted() && $form->isValid()) {
 
             $store->setUpdatedAt(new \DateTime('now'));
@@ -53,7 +55,8 @@ class StoreController extends Controller
 
         return $this->render('store/new.html.twig', array(
             'store' => $store,
-            'form' => $form->createView(),'stores' => $stores,
+            'form' => $form->createView(),
+            'stores' => $stores,
             'nbElements'=>$nb,
 
         ));
@@ -84,6 +87,7 @@ class StoreController extends Controller
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
+            $store->setUpdatedAt(new \DateTime('now'));
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('store_new', array('id' => $store->getId()));
@@ -125,6 +129,7 @@ class StoreController extends Controller
             ->getForm()
         ;
     }
+
 
 
 }

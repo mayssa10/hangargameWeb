@@ -6,7 +6,7 @@ produit_index:
 produit_show:
     path:     /{id}/show
     defaults: { _controller: "FrontendProduitBundle:Produit:show" }
-    methods:  GET
+    methods:  [GET, POST]
 
 produit_new:
     path:     /{id}/new
@@ -21,4 +21,5 @@ produit_edit:
 produit_delete:
     path:     /{id}/delete
     defaults: { _controller: "FrontendProduitBundle:Produit:delete" }
-    methods:  DELETE
+
+

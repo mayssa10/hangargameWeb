@@ -45,12 +45,12 @@
 
         <div class="row vertical-gap lg-gap">
         {% for store in stores %}
-                       {% set lien = app.request.getBaseURL() ~ '/uploads/Images/Stores/' ~ store.image %}
+
             <div class="col-md-6">
 
                 <blockquote class="nk-testimonial-2">
 
-                    <div class="nk-testimonial-photo" style="background-image: url({{lien }}"></div>
+                    <div class="nk-testimonial-photo" name="{{ store.id }}" style="background-image: url({{ asset('/uploads/Images/Stores/' ~ store.imageName) }}"></div>
                     <div class="nk-testimonial-photo"></div>
                     <div class="nk-testimonial-name h1"><em><a href={{ path('produit_show',{'id':store.id}) }}> {{ store.nom }}</a></em> </div>
                     <div class="nk-testimonial-body">{{ store.description }}</div>

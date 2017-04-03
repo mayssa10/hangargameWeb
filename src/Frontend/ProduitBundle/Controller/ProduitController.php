@@ -3,6 +3,7 @@
 namespace Frontend\ProduitBundle\Controller;
 
 use EntityBundle\Entity\Produit;
+use EntityBundle\Entity\CommentaireProduit;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use DateTime;
@@ -40,9 +41,12 @@ class ProduitController extends Controller
 
         $id= $request->get('id');
         $produit->setStore($id);
+        $produit->setLikes(0);
+
         $now=new DateTime();
         $now->format('d-m-y');
-   $produit->setDate($now);
+        $produit->setDate($now);
+
 
         if ($form->isSubmitted() && $form->isValid()) {
 
@@ -52,8 +56,10 @@ class ProduitController extends Controller
             $em->persist($produit);
             $em->flush();
 
-            return $this->redirectToRoute('store_new');
+            return $this->redirectToRoute('produit_show', array('id' => $produit->getStore()));
         }
+
+
 
         return $this->render('produit/new.html.twig', array(
             'produit' => $produit,
@@ -77,6 +83,12 @@ class ProduitController extends Controller
 
         $repository = $this->getDoctrine()->getRepository('EntityBundle:Produit');
 
+        $repository2 = $this->getDoctrine()->getRepository('EntityBundle:Store');
+
+        $storeRec=$repository2->findOneBy(array('id'=>$id));
+        $UserRec=$storeRec->getUser();
+
+
         // query for a single product matching the given name and price
 
         if(isset($_GET['like']))
@@ -87,14 +99,31 @@ class ProduitController extends Controller
             $prod = $em->getRepository('EntityBundle:Produit')->find($m);
 
             $prod->setLikes($_GET['like']+1);
-        $em->persist($prod);
-        $em->flush();}
+            $em->persist($prod);
+            $em->flush();}
 
 
+        //commentaire section //////////////////////////////////////////////////
+        $com = new CommentaireProduit();
+        $now=new DateTime();
+        $now->format('d-m-y');
+        $com->setDate($now);
+        $com->setProduit($request->get('id'));
+        if($request->isMethod("POST"))
+        {
+            $commentaire= $request->get('contenuh');
+            $com->setCommentaire($commentaire);
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($com);
+            $em->flush();
+
+            return $this->redirectToRoute('produit_show', array('id' => $request->get('id')));
+        }
         return $this->render('produit/show.html.twig', array(
             'produit' => $produit,
-
+            'UserRec'=> $UserRec,
         ));
+
     }
 
     /**
@@ -110,7 +139,7 @@ class ProduitController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('produit_edit', array('id' => $produit->getId()));
+            return $this->redirectToRoute('produit_show', array('id' => $produit->getStore()));
         }
 
         return $this->render('produit/edit.html.twig', array(
@@ -124,18 +153,15 @@ class ProduitController extends Controller
      * Deletes a produit entity.
      *
      */
-    public function deleteAction(Request $request, Produit $produit)
+    public function deleteAction($id)
     {
-        $form = $this->createDeleteForm($produit);
-        $form->handleRequest($request);
+        $em = $this->getDoctrine()->getManager();
+        $produit = $em->getRepository('EntityBundle:Produit')->find($id);
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($produit);
+        $em->flush();
+        return $this->redirectToRoute('produit_show', array('id' => $produit->getStore()));
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->remove($produit);
-            $em->flush();
-        }
-
-        return $this->redirectToRoute('produit_index');
     }
 
     /**

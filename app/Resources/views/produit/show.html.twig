@@ -39,6 +39,7 @@
     {% endblock %}
 
     {% block Body %}
+    <form method="post" action="">
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
 <div class="nk-main">
     <div class="container">
@@ -54,25 +55,26 @@
                         <div class="nk-carousel-inner nk-popup-gallery">
                             <div>
                                 <div>
-                                    <a href="assets/images/product-4.png" class="nk-gallery-item" data-size="780x990"><img  src="" alt="">
+                                    <a href="assets/images/product-4.png" class="nk-gallery-item" data-size="780x990"><img    name="{{ produit.id }}"
+                                                    src="{{ asset('/uploads/Images/Stores/' ~ produit.imageName) }}" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div>
                                 <div>
-                                    <a href="assets/images/product-4-blue.png" class="nk-gallery-item" data-size="780x990"><img  src="" alt="">
+                                    <a href="assets/images/product-4-blue.png" class="nk-gallery-item" data-size="780x990"><img name="{{ produit.id }}"  src="{{ asset('/uploads/Images/Stores/' ~ produit.imageName) }}" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div>
                                 <div>
-                                    <a href="assets/images/product-4-green.png" class="nk-gallery-item" data-size="780x990"><img  src="" alt="">
+                                    <a href="assets/images/product-4-green.png" class="nk-gallery-item" data-size="780x990"><img  name="{{ produit.id }}"  src="{{ asset('/uploads/Images/Stores/' ~ produit.imageName) }}" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div>
                                 <div>
-                                    <a href="assets/images/product-4-orange.png" class="nk-gallery-item" data-size="780x990"><img  src="" alt="">
+                                    <a href="assets/images/product-4-orange.png" class="nk-gallery-item" data-size="780x990"><img  name="{{ produit.id }}"  src="{{ asset('/uploads/Images/Stores/' ~ produit.imageName) }}" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -80,6 +82,7 @@
                     </div>
                     <!-- END: Product Photos Carousel -->
                 </div>
+
                 <div class="col-md-7">
                     <h2 class="nk-product-title">{{ produit.nom }}</h2>
                     <div class="nk-product-description">
@@ -101,10 +104,28 @@
                     <span class="num">{{ produit.likes }}</span>
                     <span class="like-icon ion-android-favorite-outline"></span>
                     <span class="liked-icon ion-android-favorite"></span>
-                   </span>
+                   </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <span class="nk-forum-action-btn">
+                          <a href="#forum-reply" class="nk-anchor">
+                              <span class="fa fa-reply"></span> Commenter</a>
+                      </span>
                    </td>
+                    <div class="nk-gap-2">
+                        </div>
+      {% if(app.user.id == UserRec.id) %}
+                    <div class="nk-gap-2">
+                    <td class="nk-product-cart-remove "><a
+                      href="{{ path('produit_delete',{'id':produit.id}) }}"> <span
+                                                    class="ion-trash-b h5"><strong class="h5" >&nbsp; Supprimer</strong></span></a>
+                                    </td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       <td class="nk-product-cart-remove "><a
+                                            href="{{ path('produit_edit',{'id':produit.id}) }}"> <span
+                                                    class="ion-edit h5" > <strong class="h5" >&nbsp;Modifier</strong></span></a>
+                                    </td>
+                        </div>
 
 
+{% endif %}
 
 <script>$(document).ready(function () {
                 $('#like{{ produit.id }}').click(function () {
@@ -123,13 +144,57 @@
 
 
                 </div>
-                 {% endfor %}
+
+            {% endfor %}
+
             </div>
+
+
+
+
+            </div>
+
 
             <div class="nk-gap-3"></div>
 
+        <div class="nk-gap-2"></div>
+        <div class="nk-gap-2"></div>
+        <!-- START: Reply -->
+
+        <h3 id="forum-reply" class="h4">Reply</h3>
+        <div class="nk-gap-1"></div>
+        <div class="nk-summernote" id="contenuTxt" >12</div>
+
+
+    <script>
+        function getT() {
+            var node = document.getElementById('contenuTxt');
+            var text = node.innerHTML;
+
+           return text;
+        }
+
+        function setT() {
+            document.getElementById("contenuh").setAttribute('value', getT());
+            alert(getT());
+        }
+    </script>
+    <input type="text" id="contenuh">
+
+        <div class="nk-gap-1"></div>
+       <button onclick="getT();setT();" type="submit" class="nk-btn nk-btn-lg link-effect-4" >Reply</button>
+
+        <!-- END: Reply -->
+
         </div>
+
+
+
+
+
+
     </div>
+    </form>
 </div>
 
     <div class="nk-gap-2"></div>
@@ -138,4 +203,7 @@
     <div class="nk-gap-2"></div>
     <div class="nk-gap-2"></div>
     <div class="nk-gap-2"></div>
+
     {% endblock %}
+
+
