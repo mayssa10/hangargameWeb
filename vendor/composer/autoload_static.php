@@ -60,6 +60,10 @@ class ComposerStaticInit2554ac6f5d571f82debebd2d3d7133d2
         array (
             'Monolog\\' => 8,
         ),
+        'K' => 
+        array (
+            'Knp\\Bundle\\PaginatorBundle\\' => 27,
+        ),
         'I' => 
         array (
             'Incenteev\\ParameterHandler\\' => 27,
@@ -176,6 +180,10 @@ class ComposerStaticInit2554ac6f5d571f82debebd2d3d7133d2
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
+        'Knp\\Bundle\\PaginatorBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/knplabs/knp-paginator-bundle',
+        ),
         'Incenteev\\ParameterHandler\\' => 
         array (
             0 => __DIR__ . '/..' . '/incenteev/composer-parameter-handler',
@@ -243,11 +251,19 @@ class ComposerStaticInit2554ac6f5d571f82debebd2d3d7133d2
                 0 => __DIR__ . '/..' . '/nomaya/social-bundle',
             ),
         ),
+<<<<<<< HEAD
+        'K' => 
+        array (
+            'Knp\\Component' => 
+            array (
+                0 => __DIR__ . '/..' . '/knplabs/knp-components/src',
+=======
         'M' => 
         array (
             'Metadata\\' => 
             array (
                 0 => __DIR__ . '/..' . '/jms/metadata/src',
+>>>>>>> f8ec01f785fc4ab66ec77d7cea01be1696731d83
             ),
         ),
         'D' => 

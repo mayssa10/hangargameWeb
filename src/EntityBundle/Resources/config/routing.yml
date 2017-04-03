@@ -2,6 +2,10 @@ entity_evenement:
     resource: "@EntityBundle/Resources/config/routing/evenement.yml"
     prefix:   /evenement
 
+entity_tournoi:
+    resource: "@EntityBundle/Resources/config/routing/tournoi.yml"
+    prefix:   /tournoi
+
 entity_produit:
     resource: "@FrontendProduitBundle/Resources/config/routing/produit.yml"
     prefix:   /produit
@@ -13,7 +17,9 @@ entity_actualite:
 entity_store:
     resource: "@FrontendStoreBundle/Resources/config/routing/store.yml"
     prefix:   /store
-
+entity_console:
+    resource: "@BackendConsoleBundle/Resources/config/routing/console.yml"
+    prefix:   /console
 entity_homepage:
     path:     /
     defaults: { _controller: EntityBundle:Default:index }

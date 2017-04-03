@@ -1,24 +1,24 @@
 tournoi_index:
     path:     /
-    defaults: { _controller: "FrontendTournoiBundle:Default:index" }
+    defaults: { _controller: "EntityBundle:Tournoi:index" }
     methods:  GET
 
 tournoi_show:
-    path:     /{id}/show
-    defaults: { _controller: "FrontendTournoiBundle:Tournoi:show" }
+    path:     /show
+    defaults: { _controller: "EntityBundle:Tournoi:show" }
     methods:  GET
 
 tournoi_new:
     path:     /new
-    defaults: { _controller: "FrontendTournoiBundle:Tournoi:new" }
+    defaults: { _controller: "EntityBundle:Tournoi:new" }
     methods:  [GET, POST]
 
 tournoi_edit:
     path:     /{id}/edit
-    defaults: { _controller: "FrontendTournoiBundle:Tournoi:edit" }
+    defaults: { _controller: "EntityBundle:Tournoi:edit" }
     methods:  [GET, POST]
 
 tournoi_delete:
     path:     /{id}/delete
-    defaults: { _controller: "FrontendTournoiBundle:Tournoi:delete" }
-    methods:  DELETE
+    defaults: { _controller: "EntityBundle:Tournoi:delete" }
+    methods:  [DELETE,GET]
